@@ -32,8 +32,9 @@ Achteraf als afsluiter van de dag moest ik een grafische omgeving installeren op
 
 _8:00 - 16:00_
 
-Zelfstandig research gedaan naar [Redhat Satellite](), [Foreman](https://theforeman.org) en [Katello](). Ook naar filesecurity: ACL's, SELinux
+Zelfstandig research gedaan naar [Redhat Satellite](https://www.redhat.com/en/technologies/management/satellite), [Foreman](https://theforeman.org) en [Katello](https://www.theforeman.org/plugins/katello/). Ook naar filesecurity: ACL's, SELinux
 
 Verworven kennis toegepast in demo-omgeving.
+Samen met Tom de Satellite omgeving ontdekt. uitleg gekregen hoe alles werkt.
 
 ## Donderdag 24/02/2022
