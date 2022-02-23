@@ -30,4 +30,10 @@ Achteraf als afsluiter van de dag moest ik een grafische omgeving installeren op
 
 ## Woensdag 23/02/2022
 
+_8:00 - 16:00_
+
+Zelfstandig research gedaan naar [Redhat Satellite](), [Foreman](https://theforeman.org) en [Katello](). Ook naar filesecurity: ACL's, SELinux
+
+Verworven kennis toegepast in demo-omgeving.
+
 ## Donderdag 24/02/2022
