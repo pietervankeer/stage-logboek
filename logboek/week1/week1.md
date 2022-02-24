@@ -38,3 +38,7 @@ Verworven kennis toegepast in demo-omgeving.
 Samen met Tom de Satellite omgeving ontdekt. uitleg gekregen hoe alles werkt.
 
 ## Donderdag 24/02/2022
+
+_8:00 - 16:00_  
+
+Kennis opgefrist ivm Mariadb, mysql en appstreams in RHEL. Manueel mariadb geïnstalleerd op devmachine, db en users aangemaakt. Research over puppet en aan de hand van puppet mariadb proberen installeren en users en db's aan te maken. Meeting bijgewoond met externe mensen.
