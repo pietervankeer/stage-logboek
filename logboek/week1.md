@@ -12,10 +12,11 @@ Werkwijze voor telewerken:
 
 ## Dinsdag 22/02/2022
 
-_8:00 - 16:00_
+werkuren: _8:00 - 16:00_
 
 Zelfstandig research gedaan naar LVM (Linux Volume manager) --> <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_logical_volumes/index>
 Na de research enkele kleine opdrachtjes uitgevoerd op mijn eigen devserver binnen Defensie:
+
 1. Aanmaken logical volume
     - Maak logical volume aan van 300mb
     - mount logical volume op `/var/data01`
@@ -30,7 +31,7 @@ Achteraf als afsluiter van de dag moest ik een grafische omgeving installeren op
 
 ## Woensdag 23/02/2022
 
-_8:00 - 16:00_
+werkuren: _8:00 - 16:00_
 
 Zelfstandig research gedaan naar [Redhat Satellite](https://www.redhat.com/en/technologies/management/satellite), [Foreman](https://theforeman.org) en [Katello](https://www.theforeman.org/plugins/katello/). Ook naar filesecurity: ACL's, SELinux
 
@@ -39,6 +40,6 @@ Samen met Tom de Satellite omgeving ontdekt. uitleg gekregen hoe alles werkt.
 
 ## Donderdag 24/02/2022
 
-_8:00 - 16:00_  
+werkuren: _8:00 - 16:00_  
 
 Kennis opgefrist ivm Mariadb, mysql en appstreams in RHEL. Manueel mariadb geïnstalleerd op devmachine, db en users aangemaakt. Research over puppet en aan de hand van puppet mariadb proberen installeren en users en db's aan te maken. Meeting bijgewoond met externe mensen.
