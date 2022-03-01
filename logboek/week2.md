@@ -10,6 +10,9 @@ Afgewerkt waar ik vorige donderdag mee bezig was. Bezig aan het moderniseren van
 
 werkuren: _8:00 - 16:00_
 
+`bu_script.sh` afgewerkt. Eenvoudige zelfgeschreven versie.  
+Begin aan voorbereiding theorie voor donderdag.
+
 ## Woensdag 02/03/2022
 
 werkuren: _8:00 - 16:00_
