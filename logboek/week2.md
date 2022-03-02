@@ -17,4 +17,11 @@ Begin aan voorbereiding theorie voor donderdag.
 
 werkuren: _8:00 - 16:00_
 
+Voorbereiding voor Donderdag
+
+- Research gedaan in verband met [Zabbix](https://www.zabbix.com/documentation/5.0/en/manual/introduction/about) (monitoring tool)
+- Git kennis opgefrist
+- Toegang gekregen tot de gitlab servers van Defensie.
+- Hello world project geschreven in Puppet op mijn dev machine
+
 ## Donderdag 03/03/2022
