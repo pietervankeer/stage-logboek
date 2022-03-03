@@ -1,4 +1,4 @@
-# Stage logboek: Week 1 (28/02/2022 - 04/03/2022)
+# Stage logboek: Week 2 (28/02/2022 - 04/03/2022)
 
 ## Maandag 28/02/2022
 
@@ -25,3 +25,7 @@ Voorbereiding voor Donderdag
 - Hello world project geschreven in Puppet op mijn dev machine
 
 ## Donderdag 03/03/2022
+
+werkuren: _8:00 - 16:00_
+
+Introductie tot Zabbix en puppet door Donovan. Daarna zelf via puppet zabbix proberen installeren.
