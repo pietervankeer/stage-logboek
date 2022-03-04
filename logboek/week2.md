@@ -28,4 +28,4 @@ Voorbereiding voor Donderdag
 
 werkuren: _8:00 - 16:00_
 
-Introductie tot Zabbix en puppet door Donovan. Daarna zelf via puppet zabbix proberen installeren.
+Introductie tot Zabbix en puppet door Donovan. Daarna zelf via puppet zabbix proberen installeren op devmachine.
