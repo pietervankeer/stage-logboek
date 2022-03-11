@@ -18,4 +18,17 @@ Introductie in Jboss applicatie servers door Christophe. Christophe heeft me all
 
 werkuren: _8:00 - 16:00_
 
+De introductie in Jboss Applicatie servers verder gezet en afgewerkt. We hebben nu niet alles maar redelijk veel overlopen van jboss servers. Ook is het nu duidelijk hoe deze gemonitord worden (Jboss Operations Networks).
+
 ## Donderdag 10/03/2022
+
+Werkuren: _08:30 - 16:30_
+
+Werkdag in Peutie.
+
+De opdracht gekregen om een oplossing te zoeken voor volgende problemen:
+
+- Hoe high availability implementeren voor een db die aan een applicatie hangt?
+- Maak een procedure om Mariadb 5.5 op RHEL 7.x to upgraden naar Mariadb 10.6 op RHEL 8 zonder verlies van gegevens.
+
+Ook de toegangsbadge in orde gemaakt samen met Donovan.
