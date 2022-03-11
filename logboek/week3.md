@@ -20,6 +20,8 @@ werkuren: _8:00 - 16:00_
 
 De introductie in Jboss Applicatie servers verder gezet en afgewerkt. We hebben nu niet alles maar redelijk veel overlopen van jboss servers. Ook is het nu duidelijk hoe deze gemonitord worden (Jboss Operations Networks).
 
+Een eerste stagegesprek.
+
 ## Donderdag 10/03/2022
 
 Werkuren: _08:30 - 16:30_
