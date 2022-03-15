@@ -10,6 +10,8 @@ Verder gewerkt aan de denkoefeningen op een iteratieve manier. Alles mooi in een
 
 werkuren: _8:00 - 16:00_
 
+Verder gewerkt aan de denkoefeningen op een iteratieve manier. Er is nood aan validatie van gebruikers en databanken. Hiervoor een concept bedacht.
+
 ## Woensdag 16/03/2022
 
 werkuren: _8:00 - 16:00_
