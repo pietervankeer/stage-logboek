@@ -23,3 +23,9 @@ Hieronder vindt u een overzicht per week:
 ## Opdrachten
 
 Tijdens mijn stage heb ik vooral kleinere opdrachten gemaakt. Deze zal ik beschrijven in de map [opdrachten](opdrachten/).
+
+Opdrachten:
+
+- [Opdracht: bu_script](opdrachten/opdracht-buscript.md)
+- [Opdracht: upgrade mariadb](opdrachten/opdracht-upgrade-mariadb.md)
+- [Opdracht: db high availability](opdrachten/opdracht-db-high_availability.md)
