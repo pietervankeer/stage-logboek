@@ -1,0 +1,46 @@
+\documentclass[a4paper]{article}
+
+% packages
+\usepackage[utf8]{inputenc}
+\usepackage[dutch]{babel}
+%\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{glossaries}
+
+
+% bibliografische databank
+\usepackage[backend=biber, style=apa]{biblatex}
+\DeclareLanguageMapping{dutch}{dutch-apa}
+\addbibresource{stageverslag-2122.bib}
+
+
+\makeglossaries
+\input{woordenlijst}
+
+% Metadata
+\title{Stageverslag}
+\author{Pieter {Van Keer}}
+\date{2021 - 2022}
+
+\begin{document}
+    
+    % inhoudstafel
+    \tableofcontents
+    \pagebreak
+    
+    % kern
+    \input{voorwoord}
+    \input{defensie}
+    \input{opdrachten}
+    \input{eindreflectie}
+    
+    %Referentielijst
+    \printbibliography
+    
+    % Verklarende woordenlijst
+    \printglossary[title=Verklarende woordenlijst, toctitle=Verklarende woordenlijst]
+    
+    
+
+    
+\end{document}
