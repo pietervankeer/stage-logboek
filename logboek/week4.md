@@ -2,7 +2,7 @@
 
 ## Maandag 14/03/2022
 
-werkuren: __08:00-16:00__
+werkuren: _08:00-16:00_
 
 Verder gewerkt aan de denkoefeningen op een iteratieve manier. Alles mooi in een word-documentje gegoten.
 
@@ -16,4 +16,18 @@ Verder gewerkt aan de denkoefeningen op een iteratieve manier. Er is nood aan va
 
 werkuren: _8:00 - 16:00_
 
+Verder gewerkt aan de denkoefeningen.
+
+Upgrade mariadb:
+
+- Validatie voor users bedacht. gestart aan een script om dit uit te voeren maar ik zat vast gaandeweg dus nu ga ik eens kijken dat er geen andere manier is om dit te doen.
+
+db high availability:
+
+- Iteratie afgewerkt. Nu wachten op feedback.
+
+Stageverslag: structuur opgemaakt.
+
 ## Donderdag 17/03/2022
+
+Fysiek in Peutie.
