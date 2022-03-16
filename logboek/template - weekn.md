@@ -2,7 +2,7 @@
 
 ## Maandag 28/02/2022
 
-werkuren: __08:00-16:00__
+werkuren: _08:00-16:00_
 
 Afgewerkt waar ik vorige donderdag mee bezig was. Bezig aan het moderniseren van het script `bu_script.sh`.
 
