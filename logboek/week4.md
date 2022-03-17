@@ -31,4 +31,7 @@ Stageverslag: structuur opgemaakt.
 ## Donderdag 17/03/2022
 
 Werkuren: _08:15 - 16:15_
+
 Fysiek in Peutie.
+
+Normaal was er een introductie van mssql gepland vandaag maar deze is verzet naar een later moment. Ter vervanging heb ik verschillende praktische oefeningen gedaan ivm LVM op mijn devmachine. Ook dit allemaal besproken met Tom.
