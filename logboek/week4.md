@@ -30,4 +30,5 @@ Stageverslag: structuur opgemaakt.
 
 ## Donderdag 17/03/2022
 
+Werkuren: _08:15 - 16:15_
 Fysiek in Peutie.
