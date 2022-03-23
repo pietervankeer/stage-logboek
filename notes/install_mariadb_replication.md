@@ -143,6 +143,10 @@ sudo dnf install haproxy
 
 ```cnf
 # /etc/haproxy/haproxy.cfg
+
+defaults
+  mode  tcp
+  option mysql-check user haproxy_health
 frontend frontend
   # read-requests will arrive at port 3100
   bind *:3100
@@ -165,6 +169,12 @@ backend db_slaves
 
 ```bash
 sudo systemctl enable haproxy --now
+```
+
+### SELinux
+
+```bash
+setsebool haproxy_connect_any 1
 ```
 
 ## Test proxy
