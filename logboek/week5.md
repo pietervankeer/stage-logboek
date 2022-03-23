@@ -17,4 +17,14 @@ Jobevent van HoGent
 
 werkuren: _8:00 - 16:00_
 
+Verder gewerkt aan de denkoefening om high availability te implementeren bij databanken: Testopstelling gemaakt.
+
+- databank master
+- databank slave
+- reverse proxy
+
+![netwerk diagram](../notes/img/networkdiagram_db_replication.JPG)
+
+Er is nog uitbreiding mogelijk: Hoe van replica een master maken?
+
 ## Donderdag 24/03/2022
