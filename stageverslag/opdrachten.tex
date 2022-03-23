@@ -1,11 +1,132 @@
 %%=============================================================================
 %% Opdrachten
 %%=============================================================================
+% Opdracht template:
+
+%\subsubsection{Beginsituatie}
+%\subsubsection{Doel}
+%\subsubsection{Plan van Aanpak}
+%\subsubsection{Uitwerking}
+%\subsubsection{Eindresultaat}
+%\subsubsection{Business doelstellingen}
+%\subsubsection{Persoonlijke doelstellingen}
+
 \section{Opdrachten}
 \label{sec:opdrachten}
 
 \subsection{Backup-script moderniseren}
 
+Binnen Defensie gebruikt men een bashscript genaamd ``bu\_script.sh'' om een backup te nemen van de databanken die bestaan op een machine en deze weg te schrijven op het netwerk.  
+Ik kreeg de opdracht om dit script te moderniseren. Om de opdracht een beetje te vereenvoudigen moest ik de backup's lokaal wegschrijven.
+
+\subsubsection{Beginsituatie}
+
+Het script bestaat maar het is verouderd. Met het script is het mogelijk om meerdere instances van Mariadb/mysql te backuppen. Het script is zeer lang en moeilijk leesbaar.
+
+\subsubsection{Doel}
+
+\begin{itemize}
+    \item moderniseer het script
+    \item maak het script meer flexibel door gebruik te maken van meer variabelen
+    \item genereer een rapport van de uitvoering van het script
+    \item schrijf de backup lokaal weg onder de map ``$\sim$/backup''
+\end{itemize}
+
+\subsubsection{Plan van Aanpak}
+
+\begin{enumerate}
+    \item lees het script door en probeer de denkwijze te begrijpen van de persoon die het script geschreven heeft
+    \item verwijder delen die niet meer van toepassing zijn
+    \item voeg meer commentaar toe aan het script zodat iemand die het script later zal doornemen sneller weet wat er gebeurd
+    \item gebruik meer functies aan zodat het script meer leesbaar wordt
+    \item test het script
+\end{enumerate}
+
+\subsubsection{Uitwerking}
+
+Ik ben begonnen met het script door te nemen en de logica proberen te verstaan. Tijdens dat ik dit deed heb ik extra commentaar geschreven om duidelijk te maken wat er juist gebeurde in het script. Na een kort gesprek met Tom hebben we besloten om het script enkel te beperken voor server die maar 1 instance hebben van mariadb/mysql. Hierdoor werd het script al veel meer leesbaar. Door extra hulpfuncties toe te voegen is de leesbaarheid ook verbeterd. Tijdens het testen heb ik er nog enkele bugs uitgehaald maar het script werkt zoals gevraagd.
+
+\subsubsection{Eindresultaat}
+
+Het eindresultaat is een script dat makkelijker te lezen/verstaan en flexibel is. Het script gaat een rapport genereren van de uitvoering en de backup was te vinden in de map ``$\sim$/backup''. Er is mogelijkheid om in te toekomst het script uit te breiden zodat dit een melding gaat genereren in Zabbix (monitoring tool).
+
+\subsubsection{Business doelstellingen}
+
+Voor de business was het belangrijk dat het script een moderne update kreeg. Dit was zeker het geval.
+
+\subsubsection{Persoonlijke doelstellingen}
+
+Voor mij persoonlijk was dit een geslaagde opdracht. Het script is nu meer flexibel en dit zal er voor zorgen dat men dit in de toekomst nog kan uitbreiden.
+
+
 \subsection{Procedure upgrade mariadb}
 
+Tegen 2024 moeten alle dbserver binnen Defensie draaien op Mariadb 10.6 op RHEL 8. Om deze transitie rustig te laten verlopen is er nood aan een procedure die men kan volgen tijdens zo een upgrade van een machine.
+
+\subsubsection{Beginsituatie}
+
+De dbserver bij Defensie draaien op mariadb 5.5 op RHEL 7.
+
+\subsubsection{Doel}
+
+Schrijf een procedure die men kan volgen om een machine te upgraden naar Mariadb 10.6 op RHEL 8. De procedure moet aandacht schenken aan volgende punten:
+
+\begin{itemize}
+    \item het besturingssysteem van de nieuwe machine is Red Hat Enterprise Linux (RHEL) 8
+    \item er gaat geen data verloren
+    \item de juiste mensen inlichten dat er onderhoud zal doorgevoerd worden op hun dbserver
+\end{itemize}
+
+\subsubsection{Plan van Aanpak}
+
+Voor deze opdracht zal ik iteratief werken:
+
+\begin{itemize}
+    \item de eerste iteratie zal ik op papier (in grote lijnen) schetsen wat er moet gebeuren
+    \item de tweede iteratie zal ik dit in een word-document gieten en laten nalezen door Tom
+    \item de derde en volgende iteratie(s) zal ik de procedure meer specifiek maken
+\end{itemize}
+
+\subsubsection{Uitwerking}
+\subsubsection{Eindresultaat}
+\subsubsection{Business doelstellingen}
+\subsubsection{Persoonlijke doelstellingen}
+
 \subsection{High availability bij databanken}
+
+Onderzoek hoe men binnen defensie high availability implementeren? Als er een db faalt en niet beschikbaar is moet de applicatie zonder problemen verderwerken. Volgende punten moeten zeker vermeld zijn:
+
+\begin{itemize}
+    \item is er een licentie voor nodig?
+    \item is de software ondersteund door Red Hat?
+    \item zijn er open source beperkingen?
+    \begin{itemize}
+        \item enkel voor commercieel gebruik?
+        \item beperking voor militaire doeleinden?
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Beginsituatie}
+
+Binnen Defensie is er momenteel maar 1 databank achter een bepaalde applicatie. Dit zorgt er natuurlijk voor dat als die databank faalt, de applicatie ook niet meer zal werken.
+
+\subsubsection{Doel}
+
+Zorg ervoor dat er meerdere databanken met dezelfde data achter een bepaalde applicatie zitten.
+
+\subsubsection{Plan van Aanpak}
+
+Voor deze opdracht zal ik iteratief werken:
+
+\begin{itemize}
+    \item de eerste iteratie zal ik op papier (in grote lijnen) schetsen wat er moet gebeuren alsook ideeën opschrijven van productie die men mogelijk kan gebruiken
+    \item de tweede iteratie zal ik dit in een word-document gieten en laten nalezen door Tom
+    \item de derde en volgende iteratie(s) zal ik de procedure meer specifiek maken en uitbreiden
+\end{itemize}
+
+Nadat het document volledig is ga ik een handleiding maken om dit te implementeren en een eenvoudige opstelling testen met 2 servers.
+
+\subsubsection{Uitwerking}
+\subsubsection{Eindresultaat}
+\subsubsection{Business doelstellingen}
+\subsubsection{Persoonlijke doelstellingen}
