@@ -1,0 +1,98 @@
+
+\hypertarget{stage-logboek-week-1-21022022---24022022}{%
+\section{Stage logboek: Week 1 (21/02/2022 -
+24/02/2022)}\label{stage-logboek-week-1-21022022---24022022}}
+
+\hypertarget{maandag-21022022}{%
+\subsection{Maandag 21/02/2022}\label{maandag-21022022}}
+
+\emph{Eerste stagedag}. Kennismaking met \textbf{Tom De Leeuw}, Tom
+staat in voor het linuxgedeelte. Laptop ontvangen, vooral gepraat over
+mogelijkheden van de stage.
+
+Werkwijze voor telewerken:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  surf naar \url{https://portal.connect.mil.be} en meld aan met
+  \textbf{itsme}
+\item
+  Kies voor vpn. Eens de verbinding opstaat kan je beginnen met skype.
+\end{enumerate}
+
+\hypertarget{dinsdag-22022022}{%
+\subsection{Dinsdag 22/02/2022}\label{dinsdag-22022022}}
+
+werkuren: \emph{8:00 - 16:00}
+
+Zelfstandig research gedaan naar LVM (Linux Volume manager)
+--\textgreater{}
+\url{https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_logical_volumes/index}
+Na de research enkele kleine opdrachtjes uitgevoerd op mijn eigen
+devserver binnen Defensie:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Aanmaken logical volume
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Maak logical volume aan van 300mb
+  \item
+    mount logical volume op \texttt{/var/data01}
+  \item
+    herstart server en kijk of het nog bestaat.
+  \end{itemize}
+\item
+  Aanpassen logical volume
+
+  \begin{itemize}
+  \tightlist
+  \item
+    vergroot logical volume
+  \item
+    verklein logical volume
+  \end{itemize}
+\item
+  Volume groups
+
+  \begin{itemize}
+  \tightlist
+  \item
+    maak 2 volume groups van 100-200mb
+  \end{itemize}
+\end{enumerate}
+
+Achteraf als afsluiter van de dag moest ik een grafische omgeving
+installeren op mijn devserver en proberen om via windows rdp de server
+te kunnen overnemen.
+
+\hypertarget{woensdag-23022022}{%
+\subsection{Woensdag 23/02/2022}\label{woensdag-23022022}}
+
+werkuren: \emph{8:00 - 16:00}
+
+Zelfstandig research gedaan naar
+\href{https://www.redhat.com/en/technologies/management/satellite}{Redhat
+Satellite}, \href{https://theforeman.org}{Foreman} en
+\href{https://www.theforeman.org/plugins/katello/}{Katello}. Ook naar
+filesecurity: ACL's, SELinux
+
+Verworven kennis toegepast in demo-omgeving. Samen met Tom de Satellite
+omgeving ontdekt. uitleg gekregen hoe alles werkt.
+
+\hypertarget{donderdag-24022022}{%
+\subsection{Donderdag 24/02/2022}\label{donderdag-24022022}}
+
+werkuren: \emph{8:00 - 16:00}
+
+Kennis opgefrist ivm Mariadb, mysql en appstreams in RHEL. Manueel
+mariadb geïnstalleerd op devmachine, db en users aangemaakt. Research
+over puppet en aan de hand van puppet mariadb proberen installeren en
+users en db's aan te maken. Meeting bijgewoond met externe mensen.
+
