@@ -5,7 +5,7 @@
 \usepackage[dutch]{babel}
 \usepackage{hyperref}
 \usepackage{graphicx}
-\usepackage{glossaries}
+\usepackage[toc]{glossaries}
 
 
 % bibliografische databank
@@ -35,19 +35,19 @@
     \input{eindreflectie}
     \pagebreak
     
-    %Referentielijst
-    \printbibliography
-    \pagebreak
-    
-    % Verklarende woordenlijst
-    \printglossary[title=Verklarende woordenlijst, toctitle=Verklarende woordenlijst]
-    \pagebreak
-    
     \appendix
     %\input{../logboek/tex/week1.tex}
     %\input{../logboek/tex/week2.tex}
     %\input{../logboek/tex/week3.tex}
     %\input{../logboek/tex/week4.tex}
     %\input{../logboek/tex/week5.tex}
+    
+    % Verklarende woordenlijst
+    \printglossary[title=Verklarende woordenlijst, toctitle=Verklarende woordenlijst]
+    \pagebreak
+    
+    %Referentielijst
+    \printbibliography[heading=bibintoc]
+    \pagebreak
     
 \end{document}
