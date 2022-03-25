@@ -28,3 +28,13 @@ Verder gewerkt aan de denkoefening om high availability te implementeren bij dat
 Er is nog uitbreiding mogelijk: Hoe van replica een master maken?
 
 ## Donderdag 24/03/2022
+
+Fysiek in Peutie
+
+werkuren: _8:00 - 16:00_
+
+Introductie van _mssql_  
+Onderzoeksopdracht besproken. ik zal hierover nog een document ontvangen.  
+Tom heeft mij een rondleiding gegeven in de serverroom van in Peutie.
+
+In de namiddag was er een drink binnen defensie waar de kolonel een toespraak heeft gehouden. Het was tof om deze bij te wonen.
