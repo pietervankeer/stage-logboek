@@ -31,3 +31,4 @@ Opdrachten:
 - [Opdracht: bu_script](opdrachten/opdracht-buscript.md)
 - [Opdracht: upgrade mariadb](opdrachten/opdracht-upgrade-mariadb.md)
 - [Opdracht: db high availability](opdrachten/opdracht-db-high_availability.md)
+- [Opdracht: mssql logins](opdrachten/opdracht-mssql.md)
