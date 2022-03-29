@@ -32,3 +32,7 @@ Opdrachten:
 - [Opdracht: upgrade mariadb](opdrachten/opdracht-upgrade-mariadb.md)
 - [Opdracht: db high availability](opdrachten/opdracht-db-high_availability.md)
 - [Opdracht: mssql logins](opdrachten/opdracht-mssql.md)
+
+## Scripts
+
+In de map [scripts](scripts/) staan alle scripts die ik geschreven heb tijdens mijn stage.
