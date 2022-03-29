@@ -12,8 +12,6 @@
 4. Start and config MariaDB on replica server
 5. Test MariaDB
 
-> With new dbservers this isn't required but when replicating a existing db, you need to restore a backup to the slave.
-
 ### Reverse proxy
 
 1. Install proxy
