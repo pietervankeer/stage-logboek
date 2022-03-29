@@ -24,10 +24,14 @@ De opdracht is om het volgende te onderzoeken:
 
 ## Plan van aanpak
 
+Ik ga beginnen met mezelf bekend te maken met het onderwerp. Ik ga een virtuele machine vragen waar ik op kan testen. Daarna zal ik een oplossing proberen zoeken op het probleem, en als laatste zal ik deze testen.
+
 ## Uitwerking
 
 ## Eindresultaat
 
 ## Business doelstellingen
+
+Door het gebruikt van windows authentication zal het systeem veiliger worden.
 
 ## Persoonlijke doelstellingen
