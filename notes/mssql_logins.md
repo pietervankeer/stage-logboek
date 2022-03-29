@@ -4,7 +4,17 @@
 
 ## Kan windows authentication gebruikt worden?
 
-- Windows login maken en permissies overzetten van oude login
+Ja Windows auth kan hiervoor gebruikt worden.
+
+### Voordelen
+
+- Je kan dan een gebruiker aanmaken in AD waar niemand het wachtwoord van weet.
+
+### Nadelen
+
+### Hoe migreren?
+
+- Windows login maken en permissies overzetten van oude login via een script.
 
 ## Alternatieve authenticatie?
 
