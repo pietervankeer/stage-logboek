@@ -4,7 +4,7 @@
 
 werkuren: _08:00-16:00_
 
-Gewerkt aan de opdracht voor mssql. Vooral research gedaan en mezelf bekend gemaakt met het onderwerp.
+Gewerkt aan de opdracht voor mssql. Vooral research gedaan en mezelf bekend gemaakt met het onderwerp.  Ook een virtuele machine gevraagd om dingen te testen.
 
 ## Dinsdag 29/03/2022
 
