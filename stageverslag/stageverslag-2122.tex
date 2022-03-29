@@ -5,6 +5,7 @@
 \usepackage[dutch]{babel}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{listings}
 \usepackage[toc]{glossaries}
 
 
@@ -36,18 +37,18 @@
     \pagebreak
     
     \appendix
-    %\input{../logboek/tex/week1.tex}
-    %\input{../logboek/tex/week2.tex}
-    %\input{../logboek/tex/week3.tex}
-    %\input{../logboek/tex/week4.tex}
-    %\input{../logboek/tex/week5.tex}
+    \input{stage-logboek}
+    \pagebreak
+    \input{install-mariadb-replication}
     
     % Verklarende woordenlijst
-    \printglossary[title=Verklarende woordenlijst, toctitle=Verklarende woordenlijst]
     \pagebreak
+    \printglossary[title=Verklarende woordenlijst, toctitle=Verklarende woordenlijst]
+    
     
     %Referentielijst
-    \printbibliography[heading=bibintoc]
     \pagebreak
+    \printbibliography[heading=bibintoc]
+    
     
 \end{document}

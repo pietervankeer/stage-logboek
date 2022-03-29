@@ -94,6 +94,7 @@ Voor deze opdracht zal ik iteratief werken:
 
 \subsection{High availability bij databanken}
 
+
 Onderzoek hoe men binnen defensie high availability implementeren? Als er een db faalt en niet beschikbaar is moet de applicatie zonder problemen verderwerken. Volgende punten moeten zeker vermeld zijn:
 
 \begin{itemize}
@@ -130,3 +131,34 @@ Nadat het document volledig is ga ik een handleiding maken om dit te implementer
 \subsubsection{Eindresultaat}
 \subsubsection{Business doelstellingen}
 \subsubsection{Persoonlijke doelstellingen}
+
+\subsection{MS SQL logins}
+
+\subsubsection{Beginsituatie}
+
+De Jboss Application servers connecteren zich met MSSQL server met SQL logins en dus via SQL server authentication.
+
+\subsubsection{Doel}
+
+Voer een onderzoek en beantwoord volgende vragen:
+
+\begin{itemize}
+    \item Kan Windows authentication gebruikt worden?
+    \item Wat zijn mogelijke alternatieven voor Authenticatie?
+    \begin{itemize}
+        \item Wat zijn voor- en nadelen (vooral op vlak van Security en Management)?
+    \end{itemize}
+    \item Welke configuratie/software/drivers moet er geïnstalleerd worden om dit mogelijk te maken?
+\end{itemize}
+
+\subsubsection{Plan van Aanpak}
+
+Ik ga beginnen met mezelf bekend te maken met het onderwerp. Ik ga een virtuele machine vragen waar ik op kan testen. Daarna zal ik een oplossing proberen zoeken op het probleem, en als laatste zal ik deze testen.
+
+%\subsubsection{Uitwerking}
+%\subsubsection{Eindresultaat}
+\subsubsection{Business doelstellingen}
+
+Door het gebruikt van windows authentication zal het systeem veiliger worden.
+
+%\subsubsection{Persoonlijke doelstellingen}

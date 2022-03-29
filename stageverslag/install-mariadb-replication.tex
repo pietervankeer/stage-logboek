@@ -1,0 +1,182 @@
+%%=============================================================================
+%% Install Mariadb Replication
+%%=============================================================================
+
+\section{MariaDB: Replication installation guide}
+
+\subsection{Steps}
+
+\subsubsection{Database replication}
+
+\begin{enumerate}
+    \item install MariaDB
+    \item start and config MariaDB on primary server
+    \item config master firewall
+    \item start and config MariaDB on replica server
+    \item test MariaDB
+\end{enumerate}
+
+\subsubsection{Reverse proxy}
+
+\begin{enumerate}
+    \item install proxy
+    \item config proxy
+    \item test proxy
+\end{enumerate}
+
+\subsection{Install MariaDB}
+
+The repository is already there so we just have to install some packages.
+
+\begin{lstlisting}
+    sudo dnf install MariaDB-server MariaDB-backup
+\end{lstlisting}
+
+\subsection{Start/config primary server}
+
+Edit config file with following:
+
+\begin{lstlisting}
+    [mariadb]
+    log_bin
+    server_id=1
+    log-basename=master
+    binlog-format=mixed
+\end{lstlisting}
+
+\textit{server\_id} is a unique value.\\
+Start the dbserver:
+
+\begin{quote}
+    If already running, restart dbserver to apply config.
+\end{quote}
+
+\begin{lstlisting}
+    systemctl enable mariadb --now
+\end{lstlisting}
+
+There should be at least 1 user created for replication:
+
+Create user accounts:
+
+\begin{quote}
+    Each account should be created on the master so replication can make these accounts on the slaves.
+\end{quote}
+
+\subsubsection{Replication user}
+
+\begin{lstlisting}
+    CREATE USER 'repl'@'slave_ip' IDENTIFIED BY 'test';
+\end{lstlisting}
+
+Grant required privileges.
+
+\begin{lstlisting}
+    GRANT REPLICATION SLAVE
+    ON *.* TO repl@'slave_ip';
+\end{lstlisting}
+
+\subsection{Start/config replica server}
+
+\begin{lstlisting}
+    [mariadb]
+    log_bin
+    server_id=2
+    log-basename=master
+    binlog-format=mixed
+\end{lstlisting}
+
+\textit{server\_id} is a unique value.\\
+
+\begin{lstlisting}
+    SHOW SLAVE STATUS;
+    +--------------------+----------+--------------+------------------+
+    | File               | Position | Binlog_Do_DB | Binlog_Ignore_DB |
+    +--------------------+----------+--------------+------------------+
+    | master1-bin.000096 |      568 |              |                  |
+    +--------------------+----------+--------------+------------------+
+\end{lstlisting}
+
+Take notes of the filename and position
+
+\begin{lstlisting}
+    CHANGE MASTER TO
+    MASTER_HOST='master_ip',
+    MASTER_USER='replication_user',
+    MASTER_PASSWORD='test',
+    MASTER_PORT=3306,
+    MASTER_LOG_FILE='master-bin.000096',
+    MASTER_LOG_POS=568,
+    MASTER_CONNECT_RETRY=10;
+\end{lstlisting}
+
+\begin{quote}
+    With fresh master, you don't need to specify `MASTER\_LOG\_FILE` and `MASTER\_LOG\_POS`
+\end{quote}
+
+\subsubsection{Start replication}
+
+\begin{lstlisting}
+    START SLAVE;
+    SHOW SLAVE STATUS;
+\end{lstlisting}
+
+If replication is running properly, both `Slave\_IO\_Running` and `Slave\_SQL\_Running` should be `Yes`.
+
+
+\subsection{Test replication}
+
+Use the following url to test replication: \url{https://mariadb.com/docs/deploy/topologies/primary-replica/enterprise-server-10-3/test-es/}
+
+\subsection{Install proxy}
+
+I chose to go with `haproxy`.\\
+To install this proxy just use dnf.
+
+\begin{lstlisting}
+    sudo dnf install haproxy
+\end{lstlisting}
+
+\subsection{Config proxy}
+
+\subsubsection{Edit configuration file}
+
+\begin{lstlisting}
+    # /etc/haproxy/haproxy.cfg
+    
+    defaults
+    mode  tcp
+    option mysql-check user haproxy_health
+    frontend frontend
+    # read-requests will arrive at port 3100
+    bind *:3100
+    # write-requests will arrive at port 3200
+    bind *:3200
+    # if write send to masters
+    use_backend db_masters if { dst_port 3200 }
+    # if read sent to slaves
+    default_backend db_slaves
+    
+    backend db_masters
+    server master1 10.8.131.120:3306
+    
+    backend db_slaves
+    server slave1 10.8.131.121:3306
+    server master1 10.8.131.120:3306
+\end{lstlisting}
+
+\subsubsection{(re)start service}
+
+\begin{lstlisting}
+    sudo systemctl enable haproxy --now
+\end{lstlisting}
+
+\subsubsection{SELinux}
+
+\begin{lstlisting}
+    setsebool haproxy_connect_any 1
+\end{lstlisting}
+
+\subsection{Test proxy}
+
+To test proxy, use  port 3200 te write data and port 3100 to query data.
