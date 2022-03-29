@@ -10,6 +10,10 @@ Gewerkt aan de opdracht voor mssql. Vooral research gedaan en mezelf bekend gema
 
 werkuren: _8:00 - 16:00_
 
+Bijlagen toegevoegd aan stageverslag. Verder onderzoek gedaan voor mssql.
+
+Ad hoc een taak gekregen van Tom: [schrijf een patch voor een databank](../scripts/tables_patch/)
+
 ## Woensdag 30/03/2022
 
 werkuren: _8:00 - 16:00_
