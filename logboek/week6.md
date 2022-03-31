@@ -26,3 +26,6 @@ Blijkbaar is het niet simpel om voor mij een virtuele machine te voorzien dus we
 werkuren: _8:00 - 16:00_
 
 Telewerken.
+
+Verder gewerkt aan de opdracht van mssql. Begonnen aan een script te schrijven voor de conversie van de logins/users te doen.  
+Dit is moeilijker dan ik gedacht had.
