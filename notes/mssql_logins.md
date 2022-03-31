@@ -17,10 +17,16 @@ Ja, Windows auth kan hiervoor gebruikt worden maar dan moet men wel alle bestaan
 
 ### Hoe migreren?
 
-- Windows login maken en permissies overzetten van oude login via een script.
+- De connectionstring waarmee de applicatie connectie maakt met de databank zal ook aangepast moeten worden.
+- Windows login maken en permissies overzetten van oude login via een script?
 
 ## Alternatieve authenticatie?
 
 Als je gebruikt maakt van Azure AD dan kan je hier ook aan authenticatie gaan doen.
 
 ## Configuratie/software/drivers?
+
+- <https://www.programcreek.com/2009/08/java-connect-ms-sql-server-using-windows-authentication/>
+
+- Benodigdheden voor het script
+  - `SqlServer` module (<https://www.powershellgallery.com/packages/Sqlserver/21.1.18256>)
