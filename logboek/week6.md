@@ -11,6 +11,7 @@ Gewerkt aan de opdracht voor mssql. Vooral research gedaan en mezelf bekend gema
 werkuren: _8:00 - 16:00_
 
 Bijlagen toegevoegd aan stageverslag. Verder onderzoek gedaan voor mssql.
+Gewacht op de virtuele machine.
 
 Ad hoc een taak gekregen van Tom: [schrijf een patch voor een databank](../scripts/tables_patch/)
 
@@ -18,4 +19,10 @@ Ad hoc een taak gekregen van Tom: [schrijf een patch voor een databank](../scrip
 
 werkuren: _8:00 - 16:00_
 
+Blijkbaar is het niet simpel om voor mij een virtuele machine te voorzien dus we hebben het het opgelost door een named instance te maken op een bestaande server. Hierdoor heb ik enkele dingen kunnen testen in mssql.
+
 ## Donderdag 31/03/2022
+
+werkuren: _8:00 - 16:00_
+
+Telewerken.
