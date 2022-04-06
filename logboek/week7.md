@@ -11,6 +11,8 @@ Johan was niet online dus ik kon hem niet bereiken om hulp te vragen.
 
 werkuren: _8:00 - 16:00_
 
+Verder gewerkt aan de opdracht. Zit nog steeds vast, Johan niet online.
+
 ## Woensdag 06/04/2022
 
 werkuren: _8:00 - 16:00_
