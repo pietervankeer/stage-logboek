@@ -17,6 +17,10 @@ Verder gewerkt aan de opdracht. Zit nog steeds vast, Johan niet online.
 
 werkuren: _8:00 - 16:00_
 
+Hulp gevraagd aan Johan maar nog geen antwoord gekregen. Voor de rest verder gewerkt aan de opdracht van mssql.
+
 ## Donderdag 07/04/2022
 
 werkuren: _8:00 - 16:00_
+
+Telewerken.
