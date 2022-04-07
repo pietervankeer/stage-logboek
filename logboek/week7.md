@@ -24,3 +24,5 @@ Hulp gevraagd aan Johan maar nog geen antwoord gekregen. Voor de rest verder gew
 werkuren: _8:00 - 16:00_
 
 Telewerken.
+
+Verder gewerkt aan mssql.
