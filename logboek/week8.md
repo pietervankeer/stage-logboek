@@ -6,6 +6,12 @@ Afwezig
 
 ## Dinsdag 01/03/2022
 
+Afwezig
+
 ## Woensdag 02/03/2022
 
+Afwezig
+
 ## Donderdag 03/03/2022
+
+Afwezig
