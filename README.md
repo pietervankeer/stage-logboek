@@ -35,4 +35,4 @@ Opdrachten:
 
 ## Scripts
 
-In de map [scripts](scripts/) staan alle scripts die ik geschreven heb tijdens mijn stage.
+In de map [scripts](scripts/) staan alle hulp scripts die ik geschreven heb tijdens mijn stage.
