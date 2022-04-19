@@ -4,11 +4,11 @@
 
 ## Kan windows authentication gebruikt worden?
 
-Ja, Windows auth kan hiervoor gebruikt worden maar dan moet men wel alle bestaande gebruikers gaan converteren naar Windows auth.
+Ja, Windows auth kan hiervoor gebruikt worden maar dan moet men wel alle bestaande gebruikers gaan converteren naar Windows auth. Echter is het niet mogelijk om bestaande sql logins te converteren naar windows logins maar men moet nieuwe windows logins aanmaken met dezelfde eigenschappen als de bestaande sql logins daarna kan men nieuwe users aanmaken voor die login.
 
 ### Voordelen
 
-- Je kan dan een gebruiker aanmaken in AD waar niemand het wachtwoord van weet.
+- Je kan dan een gebruiker aanmaken in AD waar niemand het wachtwoord van weet en zo de veiligheid van het systeem verhogen.
 
 ### Nadelen
 
