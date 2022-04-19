@@ -36,3 +36,7 @@ Opdrachten:
 ## Scripts
 
 In de map [scripts](scripts/) staan alle hulp scripts die ik geschreven heb tijdens mijn stage.
+
+## Artefacten
+
+In de map [notes](notes/) staan alle overige bestanden die aangemaakt zijn met notitites, nuttige info, ...
