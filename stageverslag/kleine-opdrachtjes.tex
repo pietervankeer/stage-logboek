@@ -1,0 +1,30 @@
+%%=============================================================================
+%% Kleine opdrachtjes
+%%=============================================================================
+
+\section{Kleine opdrachtjes}
+
+Tijdens mijn stage heb ik een aantal kleine opdrachtjes gekregen die niet echt passen tussen de grote opdrachten in sectie \ref{sec:opdrachten}. Daarom ga ik deze hier beschrijven.
+
+\subsection{Schrijf een patch voor een databank}
+\label{subsec:tables_patch}
+
+In het tekstbestand \emph{output\_old.txt} en \emph{output\_new.txt} staan namen van tabellen in een databank. (hieronder is dit een dataset om te testen)
+
+Het is de bedoeling om een bestand (\emph{patch\_command.txt}) te genereren met sql statements die alle tabellen die enkel in het bestand \emph{output\_old.txt} te vinden zijn te verwijderen.
+
+De inhoud van het tekstbestand \emph{output\_old.txt} (testdata) is:
+
+\lstinputlisting[numbers=left]{../scripts/tables_patch/output_old.txt}
+
+De inhoud van het tekstbestand \emph{output\_new.txt} (testdata) is:
+
+\lstinputlisting[numbers=left]{../scripts/tables_patch/output_new.txt}
+
+De inhoud van het bestand dat we gegenereerd hebben (\emph{patch\_command.txt}) is:
+
+\lstinputlisting[numbers=left, language=sql]{../scripts/tables_patch/patch_command.txt}
+
+\subsubsection{Script}
+
+\lstinputlisting[numbers=left, language=bash]{../scripts/tables_patch/tables_patch.sh}
