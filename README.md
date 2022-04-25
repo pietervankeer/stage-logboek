@@ -15,7 +15,7 @@ Hieronder vindt u een overzicht per week:
 - [x] [Week 6 (27/03/2022 - 01/04/2022)](logboek/week6.md)
 - [x] [Week 7 (04/04/2022 - 08/04/2022)](logboek/week7.md)
 - [x] [Week 8 (11/04/2022 - 15/04/2022)](logboek/week8.md)
-- [ ] [Week 9 (18/04/2022 - 22/04/2022)](logboek/week9.md)
+- [x] [Week 9 (18/04/2022 - 22/04/2022)](logboek/week9.md)
 - [ ] [Week 10 (25/04/2022 - 29/04/2022)](logboek/week10.md)
 - [ ] [Week 11 (02/05/2022 - 06/05/2022)](logboek/week11.md)
 - [ ] [Week 12 (09/05/2022 - 13/05/2022)](logboek/week12.md)
@@ -35,7 +35,7 @@ Opdrachten:
 
 ## Scripts
 
-In de map [scripts](scripts/) staan alle hulp scripts die ik geschreven heb tijdens mijn stage.
+In de map [scripts](scripts/) staan hulp scripts die ik geschreven heb tijdens mijn stage.
 
 ## Artefacten
 

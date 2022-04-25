@@ -19,3 +19,5 @@ Stand van zaken voor de opdracht van mssql besproken met Tom. Johan heeft deze w
 ## Donderdag 22/04/2022
 
 werkuren: _8:00 - 16:00_
+
+Begonnen aan het script om de users te checken voor de opdracht mysql migratie.
