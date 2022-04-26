@@ -40,3 +40,7 @@ In de map [scripts](scripts/) staan hulp scripts die ik geschreven heb tijdens m
 ## Artefacten
 
 In de map [notes](notes/) staan alle overige bestanden die aangemaakt zijn met notitites, nuttige info, ...
+
+## Stageverslag
+
+In de map [stageverslag](stageverslag/) staan alle bestanden die aangemaakt voor het stageverslag.
