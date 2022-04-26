@@ -19,12 +19,11 @@ def read_input_users(file):
 
     # open files
     input_file = open(
-        r"C:/Users/Pieter/workspaces/stage-logboek/scripts/upgrade-mariadb/check_users/"
-        + file,
+        r"" + file,
         "r",
     )
     test_file = open(
-        "C:/Users/Pieter/workspaces/stage-logboek/scripts/upgrade-mariadb/check_users/tmp.txt",
+        "tmp.txt",
         "w",
     )
 
@@ -41,22 +40,20 @@ def read_input_users(file):
     test_file.close()
 
     data = pd.read_csv(
-        "C:/Users/Pieter/workspaces/stage-logboek/scripts/upgrade-mariadb/check_users/tmp.txt",
+        "tmp.txt",
         sep="|",
         header=0,
     )
 
     # cleanup
-    os.remove(
-        "C:/Users/Pieter/workspaces/stage-logboek/scripts/upgrade-mariadb/check_users/tmp.txt"
-    )
+    os.remove("tmp.txt")
 
     return data
 
 
 def generate_puppet(users, grants):
     output_file = open(
-        "C:/Users/Pieter/workspaces/stage-logboek/scripts/upgrade-mariadb/check_users/output.txt",
+        "output.txt",
         "w",
     )
 
