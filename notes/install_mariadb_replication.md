@@ -79,7 +79,7 @@ log-basename=master
 binlog-format=mixed
 ```
 
-> `server_id` is a unique value+
+> `server_id` is a unique value
 
 ```sql
 SHOW SLAVE STATUS;
@@ -115,7 +115,8 @@ START SLAVE;
 SHOW SLAVE STATUS;
 ```
 
-> If replication is running properly, both `Slave_IO_Running` and `Slave_SQL_Running` should be `Yes`
+> If replication is running properly, both `Slave_IO_Running` and `Slave_SQL_Running` should be `Yes`.  
+> Momenteel hebben we een master-slave setup. Om hier nu een master-master setup van te maken moeten we er voor zorgen dat er replicatie is tussen master1 en master2.
 
 ## Test replication
 
@@ -174,5 +175,3 @@ sudo systemctl enable haproxy --now
 ```bash
 setsebool haproxy_connect_any 1
 ```
-
-## Test proxy
