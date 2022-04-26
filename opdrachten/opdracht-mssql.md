@@ -1,23 +1,23 @@
 # Opdracht: mssql logins
 
-Momenteel connecteren JBoss Application Servers zich met MSSQL Server met SQL logins en dus via SQL server Authentication.
+Momenteel connecteren JBoss Application Servers zich met MSSQL Server met SQL logins en dus via SQL server Authentication dit verloopt allemaal via een JTDS driver.  Echter is het niet mogelijk om hier met key-based authenticatie te gaan werken.
 
 De opdracht is om het volgende te onderzoeken:
 
-- Kan Windows authentication gebruikt worden?
+- Kan Windows authentication gebruikt worden zodat Jboss can connecteren met key-based auth naar mssql?
 - Wat zijn mogelijke alternatieven voor Authenticatie?
   - voor- en nadelen (vooral op vlak van Security en Management)
 - Welke configuratie/software/drivers moet er geïnstalleerd worden om dit mogelijk te maken?
 
 ## Situatie AS-IS
 
-Momenteel connecteren JBoss Application Servers zich met MSSQL Server met SQL logins en dus via SQL server Authentication.
+Momenteel connecteren JBoss Application Servers zich met MSSQL Server met SQL logins en dus via SQL server Authentication dit verloopt allemaal via een JTDS driver.  Echter is het niet mogelijk om hier met key-based authenticatie te gaan werken.
 
 ## Doel
 
 De opdracht is om het volgende te onderzoeken:
 
-- Kan Windows authentication gebruikt worden?
+- Kan Windows authentication gebruikt worden zodat Jboss can connecteren met key-based auth naar mssql?
 - Wat zijn mogelijke alternatieven voor Authenticatie?
   - voor- en nadelen (vooral op vlak van Security en Management)
 - Welke configuratie/software/drivers moet er geïnstalleerd worden om dit mogelijk te maken?
