@@ -30,7 +30,7 @@ def read_input_users(file):
 
     input_lines = input_file.readlines()
     user_lines = []
-    # filter usefull lines qnd prepare for processing
+    # filter usefull lines and prepare for processing
     for line in input_lines:
         if line[:1] != "+":
             line = line.strip("\n").strip("|").replace(" ", "") + "\n"
@@ -58,6 +58,10 @@ def generate_puppet(users, grants):
     output_file = open(
         "C:/Users/Pieter/workspaces/stage-logboek/scripts/upgrade-mariadb/check_users/output.txt",
         "w",
+    )
+
+    output_file.write(
+        "WARNING: The grants in this file are based on the 'mysql.db' table. For more info execute a show grants; command on the db.\n"
     )
 
     for userrow in users.itertuples():
@@ -118,7 +122,7 @@ def generate_puppet(users, grants):
 # main
 ignore_users = ["root", "backup", "snow_dbdetect"]
 users = read_input_users("user_input.txt")
-# grants = read_input_users("grant_input.txt")
+grants = read_input_users("grant_input.txt")
 
-print(users)
-# generate_puppet(users, grants)
+# print(users)
+generate_puppet(users, grants)
