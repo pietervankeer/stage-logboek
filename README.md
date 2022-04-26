@@ -1,6 +1,6 @@
 # Stage: Pieter Van Keer
 
-Stageplaats: Defensie
+Stageplaats: Kwartier Maj Housiau, Defensie
 
 ## Logboeken
 
