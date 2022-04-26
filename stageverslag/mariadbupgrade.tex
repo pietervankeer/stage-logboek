@@ -1,0 +1,21 @@
+%%=============================================================================
+%% Procedure: Upgrade mariadb 5.5
+%%=============================================================================
+
+\section{Procedure: Upgrade mariadb 5.5}
+This procedure can be used to upgrade Mariadb 5.5 on RHEL 7 to Mariadb 10.6 on RHEL 8
+
+\subsection{Workflow}
+
+\begin{enumerate}
+    \item Take vmware-snapshot of vm old db
+    \item Deploy new vm
+    \begin{itemize}
+        \item OS: RHEL 8
+        \item Puppet modules:
+            \begin{itemize}
+            \item mysqldb
+        \end{itemize}
+    \end{itemize}
+    \item Validate users
+\end{enumerate}
