@@ -20,6 +20,24 @@ Voor de opdracht High availability voor mariadb: Research gedaan over hoe we in 
 
 werkuren: _10:00 - 17:30_
 
+Verder gezocht naar een oplossing voor de jtds driver. Steeds niet gevonden, morgen ga ik hierover met Donovan proberen praten om samen een oplossing te zoeken.
+Nagedacht over hoe ik een testopstelling ga opzetten voor een master-master opstelling bij de opdracht High availability voor mariadb.
+
 ## Donderdag 28/04/2022
 
-werkuren: _9:00 - 17:00_
+werkuren: _8:15 - 16:15_
+
+Fysiek in Peutie.
+
+JTDS driver:
+	- Geen opzoekwerk mogelijk want binnen het netwerk van Defensie is het internet nog niet 100% opengesteld voor het personeel.
+	
+opdracht High availability voor mariadb:
+	- Netwerkdiagram aangepast zodat dit een master-master oplossing is. Nog niet getest.
+	
+opdracht upgrade mariadb:
+	- Nagedacht hoe we een script kunnen schrijven die de check voor de databases doet.
+	- Check_users. Python show grants uitvoeren voor elke user. <https://codefather.tech/blog/shell-command-python/>
+	- Check_users:
+		- verder gewerkt aan het script, logica gescrheven om grants uit te lezen rechtstreeks van de db.
+		- input veranderd dat het script de users ook rechtstreeks uit de db gaat halen.
