@@ -30,14 +30,13 @@ werkuren: _8:15 - 16:15_
 Fysiek in Peutie.
 
 JTDS driver:
-	- Geen opzoekwerk mogelijk want binnen het netwerk van Defensie is het internet nog niet 100% opengesteld voor het personeel.
-	
+
+- Geen opzoekwerk mogelijk want binnen het netwerk van Defensie is het internet nog niet 100% opengesteld voor het personeel.
 opdracht High availability voor mariadb:
-	- Netwerkdiagram aangepast zodat dit een master-master oplossing is. Nog niet getest.
-	
+- Netwerkdiagram aangepast zodat dit een master-master oplossing is. Nog niet getest.
 opdracht upgrade mariadb:
-	- Nagedacht hoe we een script kunnen schrijven die de check voor de databases doet.
-	- Check_users. Python show grants uitvoeren voor elke user. <https://codefather.tech/blog/shell-command-python/>
-	- Check_users:
-		- verder gewerkt aan het script, logica gescrheven om grants uit te lezen rechtstreeks van de db.
-		- input veranderd dat het script de users ook rechtstreeks uit de db gaat halen.
+- Nagedacht hoe we een script kunnen schrijven die de check voor de databases doet.
+- Check_users. Python show grants uitvoeren voor elke user. <https://codefather.tech/blog/shell-command-python/>
+- Check_users:
+  - verder gewerkt aan het script, logica gescrheven om grants uit te lezen rechtstreeks van de db.
+  - input veranderd dat het script de users ook rechtstreeks uit de db gaat halen.
