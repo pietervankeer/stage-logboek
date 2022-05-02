@@ -21,6 +21,8 @@ Je kan gebruik maken van de microsoft JDBC driver.
 
 ### JDBC voordelen
 
+- Driver van microsoft.
+
 ### JDBC nadelen
 
 - Het is niet mogelijk om windows authenticatie te gebruiken als ge vanaf een Linux machine wil connectie maken naar de databank.
