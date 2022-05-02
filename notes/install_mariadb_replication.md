@@ -116,7 +116,7 @@ SHOW SLAVE STATUS;
 ```
 
 > If replication is running properly, both `Slave_IO_Running` and `Slave_SQL_Running` should be `Yes`.  
-> Momenteel hebben we een master-slave setup. 
+> Momenteel hebben we een master-slave setup.
 > Om hier nu een master-master setup van te maken moeten we er voor zorgen dat er replicatie is tussen master1 en master2.
 
 ## Test replication
