@@ -3,6 +3,9 @@
 # imports
 import os
 import pandas as pd
+from datetime import date
+import yaml
+import re
 
 # functions
 def is_ignored_user(line):
@@ -65,12 +68,12 @@ def generate_puppet(users, grants):
     for userrow in users.itertuples():
         strpuppet = (
             userrow[2]
-            + ":\n\tensure: present"
-            + "\n\tpassword: "
+            + ":\n  ensure: present"
+            + "\n  password: "
             + userrow[3]
-            + "\n\thost: "
+            + "\n  host: "
             + userrow[1]
-            + "\n\tgrants:\n"
+            + "\n  grants:\n"
         )
         for grantrow in grants.itertuples():
             username = grantrow[1].strip("`")
@@ -81,29 +84,29 @@ def generate_puppet(users, grants):
             if grantrow[4] == "*.*":
                 strpuppet = (
                     strpuppet
-                    + "\t\t"
+                    + "    "
                     + grantrow[1].strip("`")
                     + ":"
-                    + "\n\t\t\tensure: present"
-                    + "\n\t\t\tdb: *"
-                    + "\n\t\t\tprivileges:"
+                    + "\n      ensure: present"
+                    + "\n      db: *"
+                    + "\n      privileges:"
                 )
             else:
                 strpuppet = (
                     strpuppet
-                    + "\t\t"
+                    + "    "
                     + grantrow[1].strip("`")
                     + "@"
                     + grantrow[4].split(".")[0]
                     + ":"
-                    + "\n\t\t\tensure: present"
-                    + "\n\t\t\tdb:"
+                    + "\n      ensure: present"
+                    + "\n      db: "
                     + grantrow[4].split(".")[0]
-                    + "\n\t\t\tprivileges:"
+                    + "\n      privileges:"
                 )
             privileges = grantrow[3].split("|")
             for privilege in privileges:
-                strpuppet += "\n\t\t\t\t- " + privilege.strip()
+                strpuppet += "\n      - " + privilege.strip()
             strpuppet += "\n"
         output_file.write(strpuppet)
     output_file.close()
@@ -214,13 +217,59 @@ def filter_grant_input(grant_input):
     return grant_lines
 
 
+def chars_to_str(list):
+    # convert unwanted special characted to string
+    for line in list:
+        y = re.findall("[*][^ ]+", line)
+        idx = list.index(line)
+        if len(y) > 0:
+            list[idx] = re.sub("[*][^ ]+", '"' + y[0] + '"', line)
+        elif " * " in line or " % " in line:
+            list[idx] = line.replace("*", '"*"\n').replace("%", '"%"\n')
+    return list
+
+
 def compare_puppet():
     # open files
-    generated_puppet = open("generated_puppet.txt", "r")
-    input_puppet = open("input_puppet.txt", "r")
+    with open("input_puppet.txt", "r") as input_puppet_file, open(
+        "generated_puppet.txt", "r"
+    ) as generated_puppet_file:
+        # generate tmp files
+        tmp_file1 = open("tmp1.txt", "w")
+        tmp_file2 = open("tmp2.txt", "w")
+
+        # process tmp files
+        input_puppet_lines = input_puppet_file.readlines()
+        generated_puppet_lines = generated_puppet_file.readlines()
+        input_puppet_lines = chars_to_str(input_puppet_lines)
+        generated_puppet_lines = chars_to_str(generated_puppet_lines)
+        tmp_file1.writelines(input_puppet_lines)
+        tmp_file2.writelines(generated_puppet_lines)
+        tmp_file1.close()
+        tmp_file2.close()
+
+        tmp_file1 = open("tmp1.txt", "r")
+        tmp_file2 = open("tmp2.txt", "r")
+
+        # read yml
+        input_puppet = yaml.safe_load(tmp_file1)
+        generated_puppet = yaml.safe_load(tmp_file2, Loader=yaml.BaseLoader)
+
+        # remove tmp files
+
+    print(generated_puppet)
+
+    flag = False
+
+    return flag
+
+
+def generate_output(flag):
     output_file = open("output.txt", "w")
 
-    
+    output_file.write("Report generated on: " + str(date.today()))
+
+    output_file.close
 
 
 # main
@@ -228,4 +277,5 @@ ignore_users = ["root", "backup", "snow_dbdetect"]
 users = get_users()
 grants = get_grants(users)
 generate_puppet(users, grants)
-compare_puppet()
+is_puppet_ok = compare_puppet()
+generate_output(is_puppet_ok)
