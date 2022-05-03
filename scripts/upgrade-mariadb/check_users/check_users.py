@@ -58,7 +58,7 @@ def get_users():
 
 def generate_puppet(users, grants):
     output_file = open(
-        "output.txt",
+        "generated_puppet.txt",
         "w",
     )
 
@@ -73,23 +73,37 @@ def generate_puppet(users, grants):
             + "\n\tgrants:\n"
         )
         for grantrow in grants.itertuples():
-            if userrow[2] != grantrow[1].strip("`"):
+            username = grantrow[1].strip("`")
+            if userrow[2] != username or userrow[1] != grantrow[2].strip("`"):
                 continue
-            # TODO logica goed nakijken.
-            strpuppet = (
-                strpuppet
-                + "\t\t"
-                + userrow[2]
-                + "@"
-                + grantrow[2]
-                + ":"
-                + "\n\t\t\tensure: present"
-                + "\n\t\t\tdb:"
-                + grantrow[2]
-                + "\n\t\t\tprivileges:\n"
-            )
-            for grant in grants.itertuples():
-                strpuppet += "\t\t\t\t- " + privilege
+
+            # Als de privileges toe te passen zijn op alle db's dan hanteren we een algemene schrijfwijze
+            if grantrow[4] == "*.*":
+                strpuppet = (
+                    strpuppet
+                    + "\t\t"
+                    + grantrow[1].strip("`")
+                    + ":"
+                    + "\n\t\t\tensure: present"
+                    + "\n\t\t\tdb: *"
+                    + "\n\t\t\tprivileges:"
+                )
+            else:
+                strpuppet = (
+                    strpuppet
+                    + "\t\t"
+                    + grantrow[1].strip("`")
+                    + "@"
+                    + grantrow[4].split(".")[0]
+                    + ":"
+                    + "\n\t\t\tensure: present"
+                    + "\n\t\t\tdb:"
+                    + grantrow[4].split(".")[0]
+                    + "\n\t\t\tprivileges:"
+                )
+            privileges = grantrow[3].split("|")
+            for privilege in privileges:
+                strpuppet += "\n\t\t\t\t- " + privilege.strip()
             strpuppet += "\n"
         output_file.write(strpuppet)
     output_file.close()
@@ -97,10 +111,9 @@ def generate_puppet(users, grants):
 
 def get_grants(users):
 
+    # Testing purpose
     grant_file = open("show_grants_example.txt", "r")
-
-    process_grant_input(grant_file.readlines())
-
+    return process_grant_input(grant_file.readlines())
     # for user in users.itertuples():
     #    tmp_file = open(
     #        "tmp_users.txt",
@@ -108,7 +121,7 @@ def get_grants(users):
     #    )
     #    tmp_file = exec_query("show grants for " + user[2] + "@" + user[1])
     #    tmp_file.close()
-    #    process_grant_input(tmp_file)
+    #    return process_grant_input(tmp_file)
 
 
 def process_grant_input(grant_input):
@@ -175,6 +188,7 @@ def process_grant_input(grant_input):
             + priv_level
             + ","
             + grant_opt
+            + "\n"
         )
     tmp_file.close()
 
@@ -200,13 +214,18 @@ def filter_grant_input(grant_input):
     return grant_lines
 
 
+def compare_puppet():
+    # open files
+    generated_puppet = open("generated_puppet.txt", "r")
+    input_puppet = open("input_puppet.txt", "r")
+    output_file = open("output.txt", "w")
+
+    
+
+
 # main
 ignore_users = ["root", "backup", "snow_dbdetect"]
 users = get_users()
-# grants = get_grants(users)
-
-# Testing purpose
-grant_file = open("show_grants_example.txt", "r")
-process_grant_input(grant_file.readlines())
-
-# generate_puppet(users, grants)
+grants = get_grants(users)
+generate_puppet(users, grants)
+compare_puppet()

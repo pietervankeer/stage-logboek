@@ -1,14 +1,8 @@
-WARNING: The grants in this file are based on the 'mysql.db' table. For more info execute a show grants; command on the db.
 pieter:
 	ensure: present
 	password: *94BDCEBE19083CE2A1F959FD02F964C7AF4CFC29
 	host: localhost
 	grants:
-		pieter@zabbix:
-			ensure: present
-			db:zabbix
-			privileges:
-				- ALL
 zabbix:
 	ensure: present
 	password: *3B938EA5F55E5FF5DDC57B18DD1B463FDDF20464
@@ -19,53 +13,39 @@ pieter:
 	password: *94BDCEBE19083CE2A1F959FD02F964C7AF4CFC29
 	host: 127.0.0.0/255.0.0.0
 	grants:
-		pieter@testdb:
-			ensure: present
-			db:testdb
-			privileges:
-				- ALL
-		pieter@devdb:
-			ensure: present
-			db:devdb
-			privileges:
-				- ALL
 jan:
 	ensure: present
 	password: *94BDCEBE19083CE2A1F959FD02F964C7AF4CFC29
 	host: 127.0.0.0/255.0.0.0
 	grants:
-		jan@testdb:
-			ensure: present
-			db:testdb
-			privileges:
-				- ALL
 pietervk:
 	ensure: present
 	password: *94BDCEBE19083CE2A1F959FD02F964C7AF4CFC29
 	host: 127.0.0.0/255.0.0.0
 	grants:
-		pietervk@testdb:
-			ensure: present
-			db:testdb
-			privileges:
-				- ALL
 pieter:
 	ensure: present
 	password: *94BDCEBE19083CE2A1F959FD02F964C7AF4CFC29
 	host: 10.0.0.0/255.0.0.0
 	grants:
-		pieter@testdb:
-			ensure: present
-			db:testdb
-			privileges:
-				- ALL
 jan:
 	ensure: present
 	password: *94BDCEBE19083CE2A1F959FD02F964C7AF4CFC29
 	host: localhost
 	grants:
-		jan@testdb:
+replication_user:
+	ensure: present
+	password: *94BDCEBE19083CE2A1F959FD02F964C7AF4CFC29
+	host: %
+	grants:
+		replication_user:
 			ensure: present
-			db:testdb
+			db: *
+			privileges:
+				- REPLICATION SLAVE
+				- REPLICATION CLIENT
+		replication_user@devdb:
+			ensure: present
+			db:devdb
 			privileges:
 				- SELECT

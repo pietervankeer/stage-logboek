@@ -1,2 +1,0 @@
-user,host,grants,priv_level,grant_option
-`replication_user`,`%`,REPLICATION SLAVE| REPLICATION CLIENT,*.*,N
