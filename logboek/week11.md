@@ -12,6 +12,8 @@ Verder gewerkt aan het check_users script.
 
 werkuren: _8:30 - 16:30_
 
+Frustrerende dag achter de rug. Verder gewerkt aan het check_users script maar ik zit vast bij het vergelijken van de 2 puppet bestanden.
+
 ## Woensdag 04/05/2022
 
 werkuren: _8:00 - 16:00_
