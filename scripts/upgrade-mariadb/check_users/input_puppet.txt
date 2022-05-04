@@ -5,7 +5,7 @@ replication_user:
   grants:
     replication_user@devdb:
 	  ensure: present
-	  db:devdb
+	  db: devdb
 	  privileges:
 	  - SELECT
   replication_user:
