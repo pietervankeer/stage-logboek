@@ -1,6 +1,6 @@
 # Opdracht: DB high availability
 
-Onderzoek hoe men binnen defensie high availability implementeren? Als er een db faalt en niet beschikbaar is moet de applicatie zonder problemen verderwerken. Volgende punten moeten zeker vermeld zijn:
+Onderzoek hoe men binnen Defensie high availability kan implementeren? Als er een db faalt en niet beschikbaar is moet de applicatie zonder problemen verder werken. Volgende punten moeten zeker vermeld zijn:
 
 - is er een licentie voor nodig?
 - is de software ondersteund door Red Hat?
