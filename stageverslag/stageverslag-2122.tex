@@ -8,6 +8,7 @@
 \usepackage{listings}
 \usepackage[toc]{glossaries}
 \usepackage{xcolor}
+\usepackage{csquotes}
 
 
 % bibliografische databank
@@ -67,13 +68,13 @@
     \addtocontents{toc}{\setcounter{tocdepth}{1}}
     \input{stage-logboek}
     \pagebreak
+    \input{procedure-upgrade-mariadb}
+    \pagebreak
     \input{install-mariadb-replication}
     \pagebreak
     \input{kleine-opdrachtjes}
     \pagebreak
     \input{bu-script}
-    %\pagebreak
-    %\input{mariadbupgrade}
     
     % Verklarende woordenlijst
     \pagebreak

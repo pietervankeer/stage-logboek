@@ -1,0 +1,47 @@
+%%=============================================================================
+%% Procedure Upgrade Mariadb
+%%=============================================================================
+
+\section{Procedure: Upgrade Mariadb}
+\label{sec:upgrade-mariadb}
+
+This procedure can be used to upgrade Mariadb 5.5 on RHEL 7 to Mariadb 10.6 on RHEL 8.
+
+\begin{enumerate}
+    \item Take vmware-snapshot of vm old db
+    \item Deploy new vm
+    \begin{itemize}
+        \item OS: RHEL 8
+        \item Puppet Modules: \verb*|mysqldb|
+    \end{itemize}
+    \item Validate users (script)
+     \begin{itemize}
+        \item Check if all existing users are defined in puppet
+    \end{itemize}
+    \item Validate databases (script)
+    \begin{itemize}
+        \item Check if all existing databases are defined in puppet + check parameters
+    \end{itemize}
+    \item Create databases and users with grants via puppet
+    \item Plan a moment for the upgrade
+    \item Notify the right people "DB will be under maintenance"
+    \item Freeze the database
+    \begin{itemize}
+        \item Stop the application
+        \item Edit firewall so no external connection can be made
+    \end{itemize}
+    \item Export data from old vm
+    \item Import the data into new vm
+    \item Notify the right people "db is ready to be used."
+    \item If go (upgrade works)
+    \begin{itemize}
+        \item delete snapchot old vm
+        \item delete old vm
+    \end{itemize}
+    \item If no go (upgrade failed)
+    \begin{itemize}
+        \item restore snapshot old vm
+        \item delete snapshot old vm
+        \item delete new vm
+    \end{itemize}
+\end{enumerate}
