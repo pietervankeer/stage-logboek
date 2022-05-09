@@ -22,9 +22,13 @@ Voor deze opdracht zal ik iteratief werken:
 - De tweede iteratie zal ik dit in een word-document gieten en laten nalezen door Tom
 - De derde en volgende iteratie(s) zal ik de procedure meer specifiek maken
 - Eens de procedure duidelijk is, ga ik te werk om bepaalde hulpscripts te schrijven. Deze moeten er voor zorgen dat de persoon die de transitie doet zo weinig mogelijk manueel werk heeft.
-- Als laatste zal ik de procedure testen.
+- schrijf het script om users te checken
+- schrijf het script om databases te checken.
+- Als laatste zal ik de procedure grondig testen.
 
 ## Uitwerking
+
+Nadat de [procedure](../notes/procedure_upgrade_mariadb.md) opgesteld was en nagekeken door Tom ben ik begonnen aan het script [check_users](../scripts/upgrade-mariadb/check_users/check_users.py). Daarna ben ik begonnen aan het script [check_databases](../scripts/upgrade-mariadb/check_databases/check_databases.py)
 
 ## Eindresultaat
 
