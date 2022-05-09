@@ -10,7 +10,7 @@ werkuren: _8:00 - 16:00_
 
 ## Woensdag 11/05/2022
 
-werkuren: _8:00 - 16:00_
+Afwezig wegens een evenement van Telenet waar ik naartoe ben gegaan.
 
 ## Donderdag 12/05/2022
 
