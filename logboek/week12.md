@@ -2,7 +2,9 @@
 
 ## Maandag 09/05/2022
 
-werkuren: _08:00-16:00_
+werkuren: _08:15-16:15_
+
+Aan stageverslag gewerkt.
 
 ## Dinsdag 10/05/2022
 
