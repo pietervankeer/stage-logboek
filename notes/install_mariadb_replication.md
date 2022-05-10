@@ -33,12 +33,17 @@ Edit config file with following:
 ```cnf
 [mariadb]
 log_bin
-server_id=1
+server_id=x
+report_host=x
 log-basename=master
 binlog-format=mixed
+
+log-slave-updates
+auto_increment_increment=2
+auto_increment_offset=X
 ```
 
-> `server_id` is a unique value
+> `x` is 1 for the first master and 2 for the second master.
 
 Start the dbserver:
 > If already running, restart dbserver to apply config
@@ -74,12 +79,17 @@ Edit config file with following:
 ```cnf
 [mariadb]
 log_bin
-server_id=2
+server_id=x
+report_host=x
 log-basename=master
 binlog-format=mixed
+
+log-slave-updates
+auto_increment_increment=2
+auto_increment_offset=X
 ```
 
-> `server_id` is a unique value
+> `x` is 1 for the first master and 2 for the second master.
 
 ```sql
 SHOW SLAVE STATUS;
