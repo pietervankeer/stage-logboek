@@ -12,6 +12,10 @@ werkuren: _8:00 - 16:00_
 
 werkuren: _8:00 - 16:00_
 
+Fysiek in Peutie.
+
+Vandaag was het Business Update Drink. De hele dag waren er presentaties over veranderingen die binnen onze eenheid gaan gebeuren. Voor het personeel is dit de laatste dag voor veel personen in vakantie gaan.
+
 ## Donderdag 26/05/2022
 
-werkuren: _8:00 - 16:00_
+Geen stage
