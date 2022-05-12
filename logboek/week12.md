@@ -8,7 +8,10 @@ Aan stageverslag gewerkt.
 
 ## Dinsdag 10/05/2022
 
-werkuren: _8:00 - 16:00_
+werkuren: _8:15 - 16:15_
+
+Enkele bugs uit de handleiding gehaald om replicatie te configureren.  
+Status van de opdrachten toegevoegd in de readme
 
 ## Woensdag 11/05/2022
 
