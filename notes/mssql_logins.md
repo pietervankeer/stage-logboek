@@ -15,13 +15,9 @@ ___Nadelen___
 - Het converteren van SQL auth naar Windows auth is niet ondersteund en er zullen dus nieuwe gebruikers moeten aangemaakt worden.
 - Bestaande users (sql logins) kunnen niet hermapt worden naar een Windows logins dus we zullen alle logins opnieuw moeten aanmaken.
 
-## Alternatieve authenticatie?
+## Conclusie
 
-### Kerberos
-
-___Voordelen___
-
-- opportuniteiten voor single sign-on
+Het is mogelijk om om windows authenticatie te gaan gebruiken voor de JBOSS applicaties, maar het is niet onbelangrijk om aandacht te schenken aan het volgende. Het wachtwoord van de gebruiker die je in AD aanmaakt zal na een bepaald tijd moeten veranderd worden (afgedwongen door de policy van AD), dit is een grote administratieve taak als je dit moet doen voor alle servers.
 
 ### Single sign-on
 
