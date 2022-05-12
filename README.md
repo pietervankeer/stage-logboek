@@ -18,7 +18,7 @@ Hieronder vindt u een overzicht per week:
 - [x] [Week 9 (18/04/2022 - 22/04/2022)](logboek/week9.md)
 - [x] [Week 10 (25/04/2022 - 29/04/2022)](logboek/week10.md)
 - [x] [Week 11 (02/05/2022 - 06/05/2022)](logboek/week11.md)
-- [ ] [Week 12 (09/05/2022 - 13/05/2022)](logboek/week12.md)
+- [x] [Week 12 (09/05/2022 - 13/05/2022)](logboek/week12.md)
 - [ ] [Week 13 (16/05/2022 - 20/05/2022)](logboek/week13.md)
 - [ ] [Week 14 (23/05/2022 - 27/05/2022)](logboek/week14.md)
 
