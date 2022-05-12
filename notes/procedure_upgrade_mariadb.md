@@ -22,7 +22,7 @@ This procedure can be used to upgrade Mariadb 5.5 on RHEL 7 to Mariadb 10.6 on R
 12. If go (upgrade works)
     - delete snapchot old vm
     - delete old vm
-13. If no go (upgrqde failed)
+13. If no go (upgrade failed)
     - restore snapshot old vm
     - delete snapshot old vm
     - delete new vm
