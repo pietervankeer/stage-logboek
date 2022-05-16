@@ -92,7 +92,7 @@ Voor deze opdracht zal ik iteratief werken:
 
 \subsubsection{Uitwerking}
 
-Nadat de procedure (zie Bijlage \ref{sec: replication-installation-guide}) opgesteld was en nagekeken door Tom ben ik begonnen aan het script \verb*|check_users| (zie Bijlage \ref{sec:check-users}).
+Nadat de procedure (zie Bijlage \ref{sec:upgrade-mariadb}) opgesteld was en nagekeken door Tom ben ik begonnen aan het script \verb*|check_users| (zie Bijlage \ref{sec:check-users}).
 
 \subsubsection{Eindresultaat}
 \subsubsection{Business doelstellingen}
@@ -101,17 +101,7 @@ Nadat de procedure (zie Bijlage \ref{sec: replication-installation-guide}) opges
 \subsection{High availability bij databanken}
 
 
-Onderzoek hoe men binnen defensie high availability implementeren? Als er een db faalt en niet beschikbaar is moet de applicatie zonder problemen verderwerken. Volgende punten moeten zeker vermeld zijn:
-
-\begin{itemize}
-    \item is er een licentie voor nodig?
-    \item is de software ondersteund door Red Hat?
-    \item zijn er open source beperkingen?
-    \begin{itemize}
-        \item enkel voor commercieel gebruik?
-        \item beperking voor militaire doeleinden?
-    \end{itemize}
-\end{itemize}
+Onderzoek hoe men binnen defensie high availability implementeren? Als er een db faalt en niet beschikbaar is moet de applicatie zonder problemen verderwerken.
 
 \subsubsection{Beginsituatie}
 
@@ -119,7 +109,7 @@ Binnen Defensie is er momenteel maar 1 databank achter een bepaalde applicatie. 
 
 \subsubsection{Doel}
 
-Zorg ervoor dat er meerdere databanken met dezelfde data achter een bepaalde applicatie zitten.
+Om de kans op het verliezen van data te verkleinen wil men bij Defensie databank replicatie implementeren.
 
 \subsubsection{Plan van Aanpak}
 
@@ -136,11 +126,20 @@ Nadat het document volledig is ga ik een handleiding maken om dit te implementer
 
 \subsubsection{Uitwerking}
 
-Ik heb een installatie handleiding gemaakt (Zie bijlage \ref{sec: replication-installation-guide})
+Ik heb een installatie handleiding (zie bijlage \ref{sec: replication-installation-guide}) gemaakt om een master-master opstelling op te zetten.
 
 \subsubsection{Eindresultaat}
+
+Er is een handleiding gemaakt die men kan volgen om master-master replicatie op te zetten voor een applicatie. Als er 1 server wegvalt dan zal de proxy automatisch schakelen tussen de \gls{db} servers.
+
 \subsubsection{Business doelstellingen}
+
+Er is replicatie tussen de databank servers.
+
 \subsubsection{Persoonlijke doelstellingen}
+
+Ik heb bijgeleerd over replicatie tussen databanken en hun verschillende opstellingen.
+
 
 \subsection{MS SQL logins}
 
