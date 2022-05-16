@@ -7,10 +7,9 @@
 ### Database replication
 
 1. Install MariaDB
-2. Start and config MariaDB on primary server
-3. config master firewall
-4. Start and config MariaDB on replica server
-5. Test MariaDB
+2. Start and config MariaDB server
+3. config firewall
+4. Test MariaDB
 
 ### Reverse proxy
 
@@ -26,16 +25,18 @@ The repository is already there so we just have to install some packages.
 sudo dnf install MariaDB-server MariaDB-backup
 ```
 
-## Start/config primary server
+## Start/config server
 
 Edit config file with following:
+
+`/etc/my.cnf`
 
 ```cnf
 [mariadb]
 log_bin
-server_id=x
-report_host=x
-log-basename=master
+server_id=X
+report_host=X
+log-basename=masterX
 binlog-format=mixed
 
 log-slave-updates
@@ -43,7 +44,7 @@ auto_increment_increment=2
 auto_increment_offset=X
 ```
 
-> `x` is 1 for the first master and 2 for the second master.
+> `X` is 1 for the first master and 2 for the second master.
 
 Start the dbserver:
 > If already running, restart dbserver to apply config
@@ -62,17 +63,17 @@ Create user accounts:
 ### replication user
 
 ```sql
-CREATE USER 'repl'@'slave_ip' IDENTIFIED BY 'test';
+CREATE USER 'repl'@'serv_ip' IDENTIFIED BY 'test';
 ```
 
 Grant required privileges.
 
 ```sql
 GRANT REPLICATION SLAVE
-ON *.* TO repl@'slave_ip';
+ON *.* TO repl@'serv_ip';
 ```
 
-## Start/config replica server
+## Start/config second server
 
 Edit config file with following:
 
@@ -92,7 +93,7 @@ auto_increment_offset=X
 > `x` is 1 for the first master and 2 for the second master.
 
 ```sql
-SHOW SLAVE STATUS;
+SHOW MASTER STATUS;
 +--------------------+----------+--------------+------------------+
 | File               | Position | Binlog_Do_DB | Binlog_Ignore_DB |
 +--------------------+----------+--------------+------------------+
@@ -125,9 +126,7 @@ START SLAVE;
 SHOW SLAVE STATUS;
 ```
 
-> If replication is running properly, both `Slave_IO_Running` and `Slave_SQL_Running` should be `Yes`.  
-> Momenteel hebben we een master-slave setup.
-> Om hier nu een master-master setup van te maken moeten we er voor zorgen dat er replicatie is tussen master1 en master2.
+> If replication is running properly, both `Slave_IO_Running` and `Slave_SQL_Running` should be `Yes`.
 
 ## Test replication
 
