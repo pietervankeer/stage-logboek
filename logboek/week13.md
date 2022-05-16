@@ -4,9 +4,18 @@
 
 werkuren: _08:00-16:00_
 
-Conclusie geschreven voor de opdracht van mssql. Deze opdracht is nu ook afgerond.
+een manier gevonden om de titelpagina toe te voegen aan het stageverslag.
 
-Het stageverslag ook up-to-date gemaakt en een manier gevonden om de titelpagina toe te voegen.
+mssql:
+
+- conclusie geschreven voor de opdracht van mssql. Deze opdracht is nu ook afgerond.
+- Het in het stageverslag ook de opdracht mssql up-to-date gemaakt.
+
+Mariadb replication:
+
+- master-master geprobeerd en gefinaliseerd.
+- handleiding geupdate
+- Het in het stageverslag ook de opdracht Mariadb replication up-to-date gemaakt.
 
 ## Dinsdag 17/05/2022
 
