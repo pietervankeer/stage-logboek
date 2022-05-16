@@ -11,9 +11,8 @@
 
 \begin{enumerate}
     \item install MariaDB
-    \item start and config MariaDB on primary server
-    \item config master firewall
-    \item start and config MariaDB on replica server
+    \item start and config MariaDB servers
+    \item config firewall on servers
     \item test MariaDB
 \end{enumerate}
 
@@ -33,19 +32,25 @@ The repository is already there so we just have to install some packages.
     sudo dnf install MariaDB-server MariaDB-backup
 \end{lstlisting}
 
-\subsection{Start/config primary server}
+\subsection{Start/config first server}
 
-Edit config file with following:
+Edit config file (\verb*|/etc/my.cnf|) with following:
 
 \begin{lstlisting}
-    [mariadb]
-    log_bin
-    server_id=1
-    log-basename=master
-    binlog-format=mixed
+[mariadb]
+log_bin
+server_id=X
+report_host=X
+log-basename=masterX
+binlog-format=mixed
+
+log-slave-updates
+auto_increment_increment=2
+auto_increment_offset=X
 \end{lstlisting}
 
-\textit{server\_id} is a unique value.\\
+\emph{\verb*|X| is 1 for the first master and 2 for the second master.}
+
 Start the dbserver:
 
 \begin{quote}
@@ -67,30 +72,35 @@ Create user accounts:
 \subsubsection{Replication user}
 
 \begin{lstlisting}
-    CREATE USER 'repl'@'slave_ip' IDENTIFIED BY 'test';
+    CREATE USER 'repl'@'serv_ip' IDENTIFIED BY 'test';
 \end{lstlisting}
 
 Grant required privileges.
 
 \begin{lstlisting}
     GRANT REPLICATION SLAVE
-    ON *.* TO repl@'slave_ip';
+    ON *.* TO repl@'serv_ip';
 \end{lstlisting}
 
-\subsection{Start/config replica server}
+\subsection{Start/config second server}
 
 \begin{lstlisting}
-    [mariadb]
-    log_bin
-    server_id=2
-    log-basename=master
-    binlog-format=mixed
+[mariadb]
+log_bin
+server_id=x
+report_host=x
+log-basename=masterX
+binlog-format=mixed
+
+log-slave-updates
+auto_increment_increment=2
+auto_increment_offset=X
 \end{lstlisting}
 
-\textit{server\_id} is a unique value.\\
+\emph{\verb*|X| is 1 for the first master and 2 for the second master.}
 
 \begin{lstlisting}
-    SHOW SLAVE STATUS;
+    SHOW MASTER STATUS;
     +--------------------+----------+--------------+------------------+
     | File               | Position | Binlog_Do_DB | Binlog_Ignore_DB |
     +--------------------+----------+--------------+------------------+
@@ -160,10 +170,9 @@ To install this proxy just use dnf.
     
     backend db_masters
     server master1 10.8.131.120:3306
+    server master2 10.8.131.121:3306
     
     backend db_slaves
-    server slave1 10.8.131.121:3306
-    server master1 10.8.131.120:3306
 \end{lstlisting}
 
 \subsubsection{(re)start service}
