@@ -125,10 +125,11 @@ Voor deze opdracht zal ik iteratief werken:
 \begin{itemize}
     \item de eerste iteratie zal ik op papier (in grote lijnen) schetsen wat er moet gebeuren alsook ideeën opschrijven van productie die men mogelijk kan gebruiken
     \item de tweede iteratie zal ik dit in een word-document gieten en laten nalezen door Tom
-    \item de derde en volgende iteratie(s) zal ik de procedure meer specifiek maken en uitbreiden
+    \item ik ga een master-slave opstelling testen
+    \item ik ga proberen om de master-slave opstelling om te vormen naar een master-master
 \end{itemize}
 
-Nadat het document volledig is ga ik een handleiding maken om dit te implementeren en een eenvoudige opstelling testen met 2 servers.
+Nadat het document volledig is ga ik een handleiding maken om dit te implementeren en een eenvoudige opstelling testen met drie servers (twee \gls{db} servers en 1 een proxyserver).
 
 \subsubsection{Uitwerking}
 
@@ -146,25 +147,20 @@ De Jboss Application servers connecteren zich met MSSQL server met SQL logins en
 
 \subsubsection{Doel}
 
-Voer een onderzoek en beantwoord volgende vragen:
-
-\begin{itemize}
-    \item Kan Windows authentication gebruikt worden?
-    \item Wat zijn mogelijke alternatieven voor Authenticatie?
-    \begin{itemize}
-        \item Wat zijn voor- en nadelen (vooral op vlak van Security en Management)?
-    \end{itemize}
-    \item Welke configuratie/software/drivers moet er geïnstalleerd worden om dit mogelijk te maken?
-\end{itemize}
+Om het systeem veiliger te maken wil de dienst \gls{mssql} overschakelen naar Windows authenticatie bij het inloggen op een databank.
 
 \subsubsection{Plan van Aanpak}
 
 Ik ga beginnen met mezelf bekend te maken met het onderwerp. Ik ga een virtuele machine vragen waar ik op kan testen. Daarna zal ik een oplossing proberen zoeken op het probleem, en als laatste zal ik deze testen.
 
-%\subsubsection{Uitwerking}
-%\subsubsection{Eindresultaat}
+\subsubsection{Uitwerking}
+
+Ik had een virtuele machine gevraagd die ik kon gebruiken als testomgeving. Blijkbaar is het niet zo simpel om voor mij een virtuele machine te voorzien dus hebben ze mij toegang gegeven op een bestaande databank. Zo had ik een omgeving om dingen te testen. Ik heb een gesprek gehad met Donovan om een oplossing te zoeken op het probleem.
+
+\subsubsection{Eindresultaat}
+
+Het is mogelijk om om windows authenticatie te gaan gebruiken voor de JBOSS applicaties, maar het is niet onbelangrijk om aandacht te schenken aan het volgende. Het wachtwoord van de gebruiker die je in \gls{ad} aanmaakt zal na een bepaalde tijd moeten veranderd worden (afgedwongen door de policy van \gls{ad}), dit is een grote administratieve taak als je dit moet doen voor alle servers. Om aan Windows authenticatie te doen kam men gebruik maken van dezelfde driver dat men nu ook gebruikt.
+
 \subsubsection{Business doelstellingen}
 
-Door het gebruikt van windows authentication zal het systeem veiliger worden.
-
-%\subsubsection{Persoonlijke doelstellingen}
+Het systeem zal veiliger zijn met Windows Auhenticatie omdat er dan gebruikers gebruikt worden die gedefinieerd zijn in \gls{ad}.
