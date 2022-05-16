@@ -15,12 +15,7 @@ Momenteel connecteren JBoss Application Servers zich met MSSQL Server met SQL lo
 
 ## Doel
 
-De opdracht is om het volgende te onderzoeken:
-
-- Kan Windows authentication gebruikt worden zodat Jboss can connecteren met key-based auth naar mssql?
-- Wat zijn mogelijke alternatieven voor Authenticatie?
-  - voor- en nadelen (vooral op vlak van Security en Management)
-- Welke configuratie/software/drivers moet er geïnstalleerd worden om dit mogelijk te maken?
+Om het systeem veiliger te maken wil de dienst MSSQL overschakelen naar Windows authenticatie bij het inloggen op een databank.
 
 ## Plan van aanpak
 
@@ -28,10 +23,12 @@ Ik ga beginnen met mezelf bekend te maken met het onderwerp. Ik ga een virtuele 
 
 ## Uitwerking
 
+Ik had een virtuele machine gevraagd die ik kon gebruiken als testomgeving. Blijkbaar is het niet zo simpel om voor mij een virtuele machine te voorzien dus hebben ze mij toegang gegeven op een bestaande databank. Zo had ik een omgeving om dingen te testen. Ik heb een gesprek gehad met Donovan om een oplossing te zoeken op het probleem.11
+
 ## Eindresultaat
+
+Het is mogelijk om om windows authenticatie te gaan gebruiken voor de JBOSS applicaties, maar het is niet onbelangrijk om aandacht te schenken aan het volgende. Het wachtwoord van de gebruiker die je in AD aanmaakt zal na een bepaalde tijd moeten veranderd worden (afgedwongen door de policy van AD), dit is een grote administratieve taak als je dit moet doen voor alle servers.
 
 ## Business doelstellingen
 
-Door het gebruikt van windows authentication zal het systeem veiliger worden.
-
-## Persoonlijke doelstellingen
+Het systeem zal veiliger zijn met Windows Auhenticatie omdat er dan gebruikers gebruikt worden die gedefinieerd zijn in Active Directory.
