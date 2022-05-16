@@ -26,21 +26,14 @@ Hieronder vindt u een overzicht per week:
 
 Tijdens mijn stage heb ik vooral kleinere opdrachten gemaakt. Deze zal ik beschrijven in de map [opdrachten](opdrachten/).
 
+> De opdrachten met een vinkje zijn opdrachten die als afgewerkt aanzien worden.
+
 Opdrachten:
 
-- [Opdracht: bu_script](opdrachten/opdracht-buscript.md)
-- [Opdracht: upgrade mariadb](opdrachten/opdracht-upgrade-mariadb.md)
-- [Opdracht: db high availability](opdrachten/opdracht-db-high_availability.md)
-- [Opdracht: mssql logins](opdrachten/opdracht-mssql.md)
-
-### Status
-
-| Opdracht             | Status                                                                 |
-| :------------------- | :--------------------------------------------------------------------- |
-| bu_script            | Opdracht afgewerkt en ingediend bij Tom                                |
-| Upgrade Mariadb      | procedure ok, script is nog niet af                                    |
-| db high availability | Handleiding up-to-date voor master-master. Maar nog niet kunnen testen |
-| mssql                | Conclusie geschreven, deze opdracht is afgewerkt                       |
+- [x] [Opdracht: bu_script](opdrachten/opdracht-buscript.md)
+- [ ] [Opdracht: upgrade mariadb](opdrachten/opdracht-upgrade-mariadb.md)
+- [x] [Opdracht: db high availability](opdrachten/opdracht-db-high_availability.md)
+- [x] [Opdracht: mssql logins](opdrachten/opdracht-mssql.md)
 
 ## Scripts
 
