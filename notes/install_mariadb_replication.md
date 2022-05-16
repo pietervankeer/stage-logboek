@@ -7,7 +7,7 @@
 ### Database replication
 
 1. Install MariaDB
-2. Start and config MariaDB server
+2. Start and config MariaDB servers
 3. config firewall
 4. Test MariaDB
 
