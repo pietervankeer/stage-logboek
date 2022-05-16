@@ -1,0 +1,4 @@
+# Shell scripts should have Unix endings
+*.sh text eol=lf
+*.bats text eol=lf
+*.py text eol=lf
