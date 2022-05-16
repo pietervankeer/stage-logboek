@@ -9,7 +9,8 @@ This procedure can be used to upgrade Mariadb 5.5 on RHEL 7 to Mariadb 10.6 on R
 3. Validate users
     - Check if all existing users are defined in puppet
 4. Validate databases
-    - Check if all existing databases are defined in puppet + check parameters
+    - execute following command to check database sizes: `lvs -o lv_name,lv_size vg_mysql`
+    - check .ini file for specific config.
 5. Create databases and users with grants via puppet
 6. Plan a moment for the upgrade
 7. Notify the right people "DB will be under maintenance"
