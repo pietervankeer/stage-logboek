@@ -35,12 +35,12 @@ Opdrachten:
 
 ### Status
 
-| Opdracht             | Status                                                                                |
-| :------------------- | :------------------------------------------------------------------------------------ |
-| bu_script            | Opdracht afgewerkt en ingediend bij Tom                                               |
-| Upgrade Mariadb      | procedure ok, script is nog niet af                                                   |
-| db high availability | Handleiding up-to-date voor master-master. Maar nog niet kunnen testen                |
-| mssql                | JTDS driver ondersteund windows auth wel maar key-based auth is niet mogelijk hiermee |
+| Opdracht             | Status                                                                 |
+| :------------------- | :--------------------------------------------------------------------- |
+| bu_script            | Opdracht afgewerkt en ingediend bij Tom                                |
+| Upgrade Mariadb      | procedure ok, script is nog niet af                                    |
+| db high availability | Handleiding up-to-date voor master-master. Maar nog niet kunnen testen |
+| mssql                | Conclusie geschreven, deze opdracht is afgewerkt                       |
 
 ## Scripts
 
