@@ -23,7 +23,6 @@ Voor deze opdracht zal ik iteratief werken:
 - De derde en volgende iteratie(s) zal ik de procedure meer specifiek maken
 - Eens de procedure duidelijk is, ga ik te werk om bepaalde hulpscripts te schrijven. Deze moeten er voor zorgen dat de persoon die de transitie doet zo weinig mogelijk manueel werk heeft.
 - schrijf het script om users te checken
-- schrijf het script om databases te checken.
 - Als laatste zal ik de procedure grondig testen.
 
 ## Uitwerking
