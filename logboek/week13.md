@@ -19,7 +19,11 @@ Mariadb replication:
 
 ## Dinsdag 17/05/2022
 
-werkuren: _8:00 - 16:00_
+werkuren: _8:30 - 16:30_
+
+Nagedacht hoe ik verder moet met het check_users script.
+
+documentatie aangevuld.
 
 ## Woensdag 18/05/2022
 
