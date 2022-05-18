@@ -29,6 +29,8 @@ documentatie aangevuld.
 
 werkuren: _8:00 - 16:00_
 
+Verder gewerkt aan check_users. Formaat geweizigd voor de puppet config.
+
 ## Donderdag 19/05/2022
 
 werkuren: _8:00 - 16:00_
