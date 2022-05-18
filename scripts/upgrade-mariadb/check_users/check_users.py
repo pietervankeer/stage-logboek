@@ -105,8 +105,13 @@ def generate_puppet(users, grants):
                     + "\n      privileges:"
                 )
             privileges = grantrow[3].split("|")
+            privileges.sort()
+            strpuppet += "\n      - "
             for privilege in privileges:
-                strpuppet += "\n      - " + privilege.strip()
+                if privileges.index(privilege) == 0:
+                    strpuppet += privilege.strip()
+                else:
+                    strpuppet += ", " + privilege.strip()
             strpuppet += "\n"
         output_file.write(strpuppet)
     output_file.close()
@@ -277,5 +282,5 @@ ignore_users = ["root", "backup", "snow_dbdetect"]
 users = get_users()
 grants = get_grants(users)
 generate_puppet(users, grants)
-is_puppet_ok = compare_puppet()
-generate_output(is_puppet_ok)
+# is_puppet_ok = compare_puppet()
+# generate_output(is_puppet_ok)
