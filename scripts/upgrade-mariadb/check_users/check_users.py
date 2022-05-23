@@ -231,8 +231,8 @@ def chars_to_str(list):
             list[list.index(line)] = ""
         # if len(y) > 0:
         #     list[idx] = re.sub("[*][^ ]+", '"' + y[0] + '"', line)
-        elif " * " in line or " % " in line:
-            list[idx] = line.replace("*", '"*"\n').replace("%", '"%"\n')
+        elif "*" in line or "%" in line:
+            list[idx] = line.replace("*", '"*"').replace("%", '"%"')
     return list
 
 
@@ -242,8 +242,8 @@ def compare_puppet():
         "generated_puppet.txt", "r"
     ) as generated_puppet_file:
         # generate tmp files
-        tmp_file1 = open("tmp1.txt", "w")
-        tmp_file2 = open("tmp2.txt", "w")
+        tmp_file1 = open("tmp1.yml", "w")
+        tmp_file2 = open("tmp2.yml", "w")
 
         # process tmp files
         input_puppet_lines = input_puppet_file.readlines()
@@ -255,16 +255,21 @@ def compare_puppet():
         tmp_file1.close()
         tmp_file2.close()
 
-        tmp_file1 = open("tmp1.txt", "r")
-        tmp_file2 = open("tmp2.txt", "r")
-
+        tmp_file1 = open("tmp1.yml", "r")
+        tmp_file2 = open("tmp2.yml", "r")
         # read yml
         input_puppet = yaml.safe_load(tmp_file1)
-        generated_puppet = yaml.safe_load(tmp_file2, Loader=yaml.BaseLoader)
+        generated_puppet = yaml.safe_load(tmp_file2)
 
         # remove tmp files
+        tmp_file1.close()
+        tmp_file2.close()
+        os.remove("tmp1.yml")
+        os.remove("tmp2.yml")
 
-    print(generated_puppet)
+    for user in generated_puppet:
+        for grant in generated_puppet[user]["grants"]:
+            print(generated_puppet[user]["grants"][grant])
 
     flag = False
 
