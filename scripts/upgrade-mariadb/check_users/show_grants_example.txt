@@ -2,5 +2,5 @@
 | Grants for replication_user@%                                                                                                                   |
 +-------------------------------------------------------------------------------------------------------------------------------------------------+
 | GRANT REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO `replication_user`@`%` IDENTIFIED BY PASSWORD '*94BDCEBE19083CE2A1F959FD02F964C7AF4CFC29' |
-| GRANT SELECT, UPDATE ON devdb.* TO `replication_user`@`%` IDENTIFIED BY PASSWORD '*94BDCEBE19083CE2A1F959FD02F964C7AF4CFC29'|
+| GRANT SELECT, UPDATE, DROP ON devdb.* TO `replication_user`@`%` IDENTIFIED BY PASSWORD '*94BDCEBE19083CE2A1F959FD02F964C7AF4CFC29'|
 +-------------------------------------------------------------------------------------------------------------------------------------------------+

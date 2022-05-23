@@ -7,8 +7,8 @@ replication_user:
       ensure: present
       db: devdb
       privileges:
-      - UPDATE, SELECT
-  replication_user:
+      - DROP, UPDATE, SELECT
+    replication_user:
       ensure: present
       db: *
       privileges:

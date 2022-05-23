@@ -12,4 +12,4 @@ replication_user:
       ensure: present
       db: devdb
       privileges:
-      - UPDATE, SELECT
+      - DROP, UPDATE, SELECT
