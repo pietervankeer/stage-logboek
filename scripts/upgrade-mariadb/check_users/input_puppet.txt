@@ -7,10 +7,9 @@ replication_user:
 	  ensure: present
 	  db: devdb
 	  privileges:
-	  - SELECT
+	  - UPDATE, SELECT
   replication_user:
 	  ensure: present
 	  db: *
 	  privileges:
-	  - REPLICATION SLAVE
-	  - REPLICATION CLIENT
+	  - REPLICATION CLIENT, REPLICATION SLAVE
