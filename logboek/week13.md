@@ -36,3 +36,5 @@ Verder gewerkt aan check_users. Formaat gewijzigd voor de puppet config.
 werkuren: _8:00 - 16:00_
 
 Fysiek in Peutie.
+
+Verder gewerkt aan check_users script, het enige wat nog moet gebeuren is puppet vergelijken. Nog steeds het probleem om puppet configuratie te gaan vergelijken.
