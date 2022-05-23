@@ -223,12 +223,14 @@ def filter_grant_input(grant_input):
 
 
 def chars_to_str(list):
-    # convert unwanted special characted to string
+    # convert unwanted special characters to string
     for line in list:
-        y = re.findall("[*][^ ]+", line)
         idx = list.index(line)
-        if len(y) > 0:
-            list[idx] = re.sub("[*][^ ]+", '"' + y[0] + '"', line)
+        # remove password lines.
+        if "password" in line:
+            list[list.index(line)] = ""
+        # if len(y) > 0:
+        #     list[idx] = re.sub("[*][^ ]+", '"' + y[0] + '"', line)
         elif " * " in line or " % " in line:
             list[idx] = line.replace("*", '"*"\n').replace("%", '"%"\n')
     return list
@@ -282,5 +284,5 @@ ignore_users = ["root", "backup", "snow_dbdetect"]
 users = get_users()
 grants = get_grants(users)
 generate_puppet(users, grants)
-# is_puppet_ok = compare_puppet()
+is_puppet_ok = compare_puppet()
 # generate_output(is_puppet_ok)
