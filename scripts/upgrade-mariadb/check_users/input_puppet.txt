@@ -4,12 +4,12 @@ replication_user:
   host: %
   grants:
     replication_user@devdb:
-	  ensure: present
-	  db: devdb
-	  privileges:
-	  - UPDATE, SELECT
+      ensure: present
+      db: devdb
+      privileges:
+      - UPDATE, SELECT
   replication_user:
-	  ensure: present
-	  db: *
-	  privileges:
-	  - REPLICATION CLIENT, REPLICATION SLAVE
+      ensure: present
+      db: *
+      privileges:
+      - REPLICATION CLIENT, REPLICATION SLAVE
