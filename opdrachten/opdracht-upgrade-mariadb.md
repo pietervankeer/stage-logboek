@@ -31,6 +31,12 @@ Nadat de [procedure](../notes/procedure_upgrade_mariadb.md) opgesteld was en nag
 
 ## Eindresultaat
 
+Ik heb een procedure (zie [procedure](../notes/procedure_upgrade_mariadb.md)) gemaakt met een aantal scripts die men kan gebruiken om enkele zaken na te kijken alvorens men een upgrade zal uitvoeren.
+
 ## Business doelstellingen
 
+De doelstellingen zijn behaald. Er is een procedure die men kan volgen tijdens het uitvoeren van een upgrade. Dit zal het werk makkelijker maken voor de mensen die de procedure uitvoeren. Door de upgrade uit te voeren zal de kans op kwetsbaarheden in het systeem dalen.
+
 ## Persoonlijke doelstellingen
+
+Ik heb een procedure en een aantal scripts gemaakt. Voor mij is dit een geslaagde opdracht.
