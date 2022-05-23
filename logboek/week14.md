@@ -2,7 +2,9 @@
 
 ## Maandag 23/05/2022
 
-werkuren: _08:00-16:00_
+werkuren: _9:30-17:30_
+
+Script 'check_users' afgewerkt waardoor de oefening [upgrade mariadb](../opdrachten/opdracht-upgrade-mariadb.md) ook afgewerkt is. Documentatie nog verder aangevuld en stageverslag up-to-date gebracht.
 
 ## Dinsdag 24/05/2022
 
