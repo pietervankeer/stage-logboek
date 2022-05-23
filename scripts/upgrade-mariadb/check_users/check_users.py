@@ -1,6 +1,8 @@
 # check users: are all existing users defined in puppet?
 
 # imports
+from bdb import GENERATOR_AND_COROUTINE_FLAGS
+from cgi import print_arguments
 import os
 import pandas as pd
 from datetime import date
@@ -267,19 +269,69 @@ def compare_puppet():
         os.remove("tmp1.yml")
         os.remove("tmp2.yml")
 
-    for user in generated_puppet:
-        for grant in generated_puppet[user]["grants"]:
-            print(generated_puppet[user]["grants"][grant])
+    usernames_flag = check_usernames(generated_puppet, input_puppet)
+    grants_flag = check_grants(generated_puppet, input_puppet)
 
-    flag = False
+    if usernames_flag and grants_flag:
+        flag = True
+    else:
+        flag = False
 
     return flag
 
 
+def check_grants(generated_puppet, input_puppet):
+    for user in generated_puppet:
+        grant_flag = True
+        for grant in generated_puppet[user]["grants"]:
+
+            # check if grant username exists in input.
+            if grant not in input_puppet[user]["grants"]:
+                grant_flag = False
+            elif (
+                generated_puppet[user]["grants"][grant]
+                != input_puppet[user]["grants"][grant]
+            ):
+                grant_flag = False
+
+    return grant_flag
+
+
+def check_usernames(generated_puppet, input_puppet):
+    # convert to username@host
+    generated_usernames = []
+    input_usernames = []
+    for generated_user in generated_puppet:
+        generated_usernames.append(
+            generated_user + "@" + generated_puppet[generated_user]["host"]
+        )
+    for input_user in input_puppet:
+        input_usernames.append(input_user + "@" + input_puppet[input_user]["host"])
+
+    # if lists are not same length = different puppet config
+    if len(generated_usernames) != len(input_usernames):
+        usernames_flag = False
+    else:
+        usernames_flag = True
+        for username in generated_usernames:
+            if username not in input_usernames:
+                usernames_flag = False
+
+    return usernames_flag
+
+
 def generate_output(flag):
+    # open output file
     output_file = open("output.txt", "w")
 
-    output_file.write("Report generated on: " + str(date.today()))
+    output_file.write("Report generated on: " + str(date.today()) + "\n")
+
+    if flag:
+        str_output = "Puppet config is ok."
+    else:
+        str_output = "Puppet config is not ok!\nIt's advised to copy the config in 'generated_puppet.txt' because this is the actual config."
+
+    output_file.write(str_output)
 
     output_file.close
 
@@ -290,4 +342,4 @@ users = get_users()
 grants = get_grants(users)
 generate_puppet(users, grants)
 is_puppet_ok = compare_puppet()
-# generate_output(is_puppet_ok)
+generate_output(is_puppet_ok)
