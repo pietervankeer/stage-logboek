@@ -31,7 +31,7 @@ Tijdens mijn stage heb ik vooral kleinere opdrachten gemaakt. Deze zal ik beschr
 Opdrachten:
 
 - [x] [Opdracht: bu_script](opdrachten/opdracht-buscript.md)
-- [ ] [Opdracht: upgrade mariadb](opdrachten/opdracht-upgrade-mariadb.md)
+- [x] [Opdracht: upgrade mariadb](opdrachten/opdracht-upgrade-mariadb.md)
 - [x] [Opdracht: db high availability](opdrachten/opdracht-db-high_availability.md)
 - [x] [Opdracht: mssql logins](opdrachten/opdracht-mssql.md)
 
@@ -45,4 +45,4 @@ In de map [notes](notes/) staan alle overige bestanden die aangemaakt zijn met n
 
 ## Stageverslag
 
-In de map [stageverslag](stageverslag/) staan alle bestanden die aangemaakt voor het stageverslag.
+In de map [stageverslag](stageverslag/) staan alle bestanden voor het stageverslag.
