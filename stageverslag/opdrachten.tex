@@ -23,7 +23,7 @@ Ik kreeg de opdracht om dit script te moderniseren. Om de opdracht een beetje te
 
 \subsubsection{Beginsituatie}
 
-Het script bestaat maar het is verouderd. Met het script is het mogelijk om meerdere instances van Mariadb/mysql te backuppen. Het script is zeer lang en moeilijk leesbaar.
+Het script bestaat, maar het is verouderd. Met het script is het mogelijk om meerdere instances van Mariadb/mysql te backuppen. Het is zeer lang en moeilijk leesbaar.
 
 \subsubsection{Doel}
 
@@ -46,11 +46,11 @@ Het script bestaat maar het is verouderd. Met het script is het mogelijk om meer
 
 \subsubsection{Uitwerking}
 
-Ik ben begonnen met het script door te nemen en de logica proberen te verstaan. Tijdens dat ik dit deed heb ik extra commentaar geschreven om duidelijk te maken wat er juist gebeurde in het script. Na een kort gesprek met Tom hebben we besloten om het script enkel te beperken voor server die maar 1 instance hebben van mariadb/mysql. Hierdoor werd het script al veel meer leesbaar. Door extra hulpfuncties toe te voegen is de leesbaarheid ook verbeterd. Tijdens het testen heb ik er nog enkele bugs uitgehaald maar het script werkt zoals gevraagd.
+Ik ben begonnen met het script door te nemen en de logica proberen te verstaan. Tijdens dat ik dit deed, heb ik extra commentaar geschreven om duidelijk te maken wat er juist gebeurde in het script. Na een kort gesprek met Tom hebben we besloten om het script enkel te beperken voor server die maar 1 instance hebben van mariadb/mysql. Hierdoor werd het script al veel meer leesbaar. Door extra hulpfuncties toe te voegen is de leesbaarheid ook verbeterd. Tijdens het testen heb ik er nog enkele bugs uitgehaald, maar het script werkt zoals gevraagd.
 
 \subsubsection{Eindresultaat}
 
-Het eindresultaat is een script dat makkelijker te lezen/verstaan en flexibel is. Het script gaat een rapport genereren van de uitvoering en de backup was te vinden in de map ``$\sim$/backup''. Er is mogelijkheid om in te toekomst het script uit te breiden zodat dit een melding gaat genereren in Zabbix (monitoring tool).
+Het eindresultaat is een script dat makkelijker te lezen, verstaan en flexibel is. Het script gaat een rapport genereren van de uitvoering en de backup was te vinden in de map ``$\sim$/backup''. Er is mogelijkheid om in te toekomst het script uit te breiden zodat dit een melding gaat genereren in Zabbix (monitoring tool).
 
 \subsubsection{Business doelstellingen}
 
@@ -65,7 +65,7 @@ Voor mij persoonlijk was dit een geslaagde opdracht. Het script is nu meer flexi
 
 \subsection{Procedure upgrade mariadb}
 
-Tegen 2024 moeten alle dbserver binnen Defensie draaien op Mariadb 10.6 op RHEL 8. Om deze transitie rustig te laten verlopen is er nood aan een procedure die men kan volgen tijdens zo een upgrade van een machine.
+Tegen 2024 moeten alle dbservers binnen Defensie draaien op Mariadb 10.6 op RHEL 8. Om deze transitie rustig te laten verlopen, is er nood aan een procedure die men kan volgen tijdens zo een upgrade van een machine.
 
 \subsubsection{Beginsituatie}
 
@@ -96,7 +96,7 @@ Voor deze opdracht zal ik iteratief werken:
 
 \subsubsection{Uitwerking}
 
-Nadat de procedure (zie Bijlage \ref{sec:upgrade-mariadb}) opgesteld was en nagekeken door Tom ben ik begonnen aan het script \verb*|check_users| (zie Bijlage \ref{sec:check-users}).
+Nadat de procedure (zie Bijlage \ref{sec:upgrade-mariadb}) opgesteld en nagekeken was door Tom, ben ik begonnen aan het script \verb*|check_users| (zie Bijlage \ref{sec:check-users}).
 
 \subsubsection{Eindresultaat}
 
@@ -123,7 +123,7 @@ Binnen Defensie is er momenteel maar 1 databank achter een bepaalde applicatie. 
 
 \subsubsection{Doel}
 
-Om de kans op het verliezen van data te verkleinen wil men bij Defensie databank replicatie implementeren.
+Om de kans op het verliezen van data te verkleinen, wil men bij Defensie databank replicatie implementeren.
 
 \subsubsection{Plan van Aanpak}
 
@@ -131,12 +131,12 @@ Voor deze opdracht zal ik iteratief werken:
 
 \begin{itemize}
     \item de eerste iteratie zal ik op papier (in grote lijnen) schetsen wat er moet gebeuren alsook ideeën opschrijven van productie die men mogelijk kan gebruiken
-    \item de tweede iteratie zal ik dit in een word-document gieten en laten nalezen door Tom
+    \item de tweede iteratie zal ik dit in een word-document zetten en laten nalezen door Tom
     \item ik ga een master-slave opstelling testen
     \item ik ga proberen om de master-slave opstelling om te vormen naar een master-master
 \end{itemize}
 
-Nadat het document volledig is ga ik een handleiding maken om dit te implementeren en een eenvoudige opstelling testen met drie servers (twee \gls{db} servers en 1 een proxyserver).
+Nadat het document volledig is, ga ik een handleiding maken om dit te implementeren en een eenvoudige opstelling testen met drie servers (twee \gls{db} servers en 1 een proxyserver).
 
 \subsubsection{Uitwerking}
 
@@ -164,7 +164,7 @@ De Jboss Application servers connecteren zich met MSSQL server met SQL logins en
 
 \subsubsection{Doel}
 
-Om het systeem veiliger te maken wil de dienst \gls{mssql} overschakelen naar Windows authenticatie bij het inloggen op een databank.
+Om het systeem veiliger te maken, wil de dienst \gls{mssql} overschakelen naar Windows authenticatie bij het inloggen op een databank.
 
 \subsubsection{Plan van Aanpak}
 
